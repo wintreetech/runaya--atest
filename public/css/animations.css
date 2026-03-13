@@ -1,0 +1,7 @@
+/* === animations.css — GSAP initial states === */
+
+/* Navbar starts off-screen; app.js animates it in */
+#navbar {
+    opacity: 0;
+    transform: translateY(-80px);
+}
