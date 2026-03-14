@@ -5,6 +5,10 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/hero.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/stats-orbit.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/critical-metals.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/our-businesses.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home-sections.css') }}">
 @endpush
 
 @section('content')
@@ -12,27 +16,27 @@
 <section class="hero" id="hero">
 
     <div class="slide is-active" id="slide-0">
-        <div class="slide-bg" style="background-image: url('{{ asset('images/corporate.jpg') }}')"></div>
+        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/corporate.jpg') }}')"></div>
         <div class="slide-content"><h1>Build<br><strong>Future Positive</strong></h1></div>
     </div>
 
     <div class="slide" id="slide-1">
-        <div class="slide-bg" style="background-image: url('{{ asset('images/sustainability.jpg') }}')"></div>
+        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/sustainability.jpg') }}')"></div>
         <div class="slide-content"><h1>Responsible<br><strong>Sustainability</strong></h1></div>
     </div>
 
     <div class="slide" id="slide-2">
-        <div class="slide-bg" style="background-image: url('{{ asset('images/esg.jpg') }}')"></div>
+        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/esg.jpg') }}')"></div>
         <div class="slide-content"><h1>Committed to<br><strong>ESG Values</strong></h1></div>
     </div>
 
     <div class="slide" id="slide-3">
-        <div class="slide-bg" style="background-image: url('{{ asset('images/safety.jpg') }}')"></div>
+        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/safety.jpg') }}')"></div>
         <div class="slide-content"><h1>Built on Trust,<br><strong>Driven by Safety</strong></h1></div>
     </div>
 
     <div class="slide" id="slide-4">
-        <div class="slide-bg" style="background-image: url('{{ asset('images/diversity.jpg') }}')"></div>
+        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/diversity.jpg') }}')"></div>
         <div class="slide-content"><h1>Different Minds,<br><strong>One Direction</strong></h1></div>
     </div>
 
@@ -77,8 +81,23 @@
 
 </section>
 
+    {{-- Stats orbit + about intro --}}
+    @include('partials.sections.stats-orbit')
+
+    {{-- Critical Metals Recovery --}}
+    @include('partials.sections.critical-metals')
+
+    {{-- Our Businesses carousel --}}
+    @include('partials.sections.our-businesses')
+
+    
+
 @endsection
 
 @push('scripts')
     <script src="{{ asset('js/carousel.js') }}"></script>
+    <script src="{{ asset('js/stats-orbit.js') }}"></script>
+    <script src="{{ asset('js/critical-metals.js') }}"></script>
+    <script src="{{ asset('js/our-businesses.js') }}"></script>
+    <script src="{{ asset('js/home-sections.js') }}"></script>
 @endpush

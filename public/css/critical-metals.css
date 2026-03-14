@@ -1,0 +1,138 @@
+/* === critical-metals.css === */
+
+.cm-section {
+    background: #edf2f2;
+    padding: 20px 40px 60px;
+}
+
+.cm-card {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #0d3d49;
+}
+
+/* SVG fills card width, height auto from 1200:720 ratio */
+.cm-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Title */
+.cm-svg-title {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    fill: #ffffff;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+/* Wave path — GSAP animates stroke-dashoffset */
+.cm-wave-path {
+}
+
+/* Mineral circle hover — spring scale */
+.cm-mineral-g {
+    cursor: pointer;
+    transform-box: fill-box;
+    transform-origin: center;
+    transition:
+        transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        filter 0.3s ease;
+}
+.cm-mineral-g:hover {
+    transform: scale(1.12);
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.55));
+}
+
+/* Placeholder hidden by default */
+.cm-img-placeholder {
+    opacity: 0;
+    pointer-events: none;
+}
+.cm-mineral-g.img-failed .cm-img-placeholder {
+    opacity: 1;
+}
+
+/* Mineral name labels */
+.cm-label {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    fill: rgba(255, 255, 255, 0.75);
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+/* Body text inside foreignObject */
+.cm-body-fo {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.82;
+    color: rgba(255, 255, 255, 0.75);
+    text-align: start;
+}
+
+/* Button wrapper inside foreignObject */
+.cm-btn-fo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.cm-btn {
+    display: inline-block;
+    background: #0a2e38;
+    color: #ffffff;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 14px 44px;
+    border-radius: 40px;
+    text-decoration: none;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    transition:
+        background 0.25s,
+        transform 0.2s;
+    white-space: nowrap;
+    transform: translate(0, 0) !important;
+}
+.cm-btn:hover {
+    background: #e8521a;
+    border-color: #e8521a;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .cm-section {
+        padding: 16px 20px 48px;
+    }
+    .cm-svg-title {
+        font-size: 36px;
+    }
+    .cm-label {
+        font-size: 14px;
+    }
+    .cm-body-fo {
+        font-size: 12px;
+    }
+}
+@media (max-width: 600px) {
+    .cm-section {
+        padding: 12px 12px 36px;
+    }
+    .cm-svg-title {
+        font-size: 26px;
+    }
+    .cm-label {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,232 @@
+/* === our-businesses.css === */
+
+/* ── Section ─────────────────────────────────────────────── */
+.ob-section {
+    background: #edf2f2;
+    padding: 60px 0 80px;
+    overflow: hidden;
+}
+
+.ob-heading {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    color: #111;
+    text-align: center;
+    letter-spacing: -0.5px;
+    margin-bottom: 40px;
+}
+
+/* ── Wrapper clips the side-peek cards ───────────────────── */
+.ob-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ── Track — flex row, GSAP moves this ──────────────────── */
+.ob-track {
+    display: flex;
+    align-items: center;
+    /* Initial offset set by JS so first card is centred */
+    will-change: transform;
+}
+
+/* ── Individual card ─────────────────────────────────────── */
+.ob-card {
+    position: relative;
+    flex-shrink: 0;
+    /* Active card: 58% wide, side cards peek at ~20% each */
+    width: 58%;
+    height: 480px;
+    border-radius: 18px;
+    overflow: hidden;
+    margin: 0 1.5%;
+    /* Side cards slightly scaled down */
+    transform: scale(0.88);
+    transition:
+        transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        opacity 0.55s ease;
+    opacity: 0.55;
+    cursor: pointer;
+}
+
+.ob-card.is-active {
+    transform: scale(1);
+    opacity: 1;
+    cursor: default;
+}
+
+/* ── Background image ────────────────────────────────────── */
+.ob-card__bg {
+    position: absolute;
+    inset: 0;
+}
+
+.ob-card__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Teal dark placeholder while image loads */
+    background: #0d2d38;
+    transition: transform 0.6s ease;
+}
+
+.ob-card.is-active .ob-card__bg img {
+    transform: scale(1.02);
+}
+
+/* ── Dark overlay ────────────────────────────────────────── */
+.ob-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 28, 38, 0.72);
+}
+
+/* ── Text content ────────────────────────────────────────── */
+.ob-card__content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 80px;
+    text-align: center;
+    z-index: 2;
+    /* Hide content on side cards */
+    opacity: 0;
+    transition: opacity 0.4s ease 0.1s;
+}
+
+.ob-card.is-active .ob-card__content {
+    opacity: 1;
+}
+
+.ob-card__content h3 {
+    font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 18px;
+    line-height: 1.25;
+}
+
+.ob-card__content p {
+    font-size: 0.92rem;
+    line-height: 1.78;
+    color: rgba(255, 255, 255, 0.78);
+    max-width: 500px;
+    margin-bottom: 28px;
+}
+
+/* ── Know More button ────────────────────────────────────── */
+.ob-btn {
+    display: inline-block;
+    background: #1a5c6b;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 14px 38px;
+    border-radius: 40px;
+    text-decoration: none;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    transition:
+        background 0.25s,
+        transform 0.2s;
+}
+
+.ob-btn:hover {
+    background: #e8521a;
+    border-color: #e8521a;
+    transform: translateY(-2px);
+}
+
+/* ── Arrows — inside active card, vertically centred ─────── */
+.ob-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        border-color 0.2s,
+        transform 0.2s;
+    /* Hidden on side cards */
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ob-card.is-active .ob-arrow {
+    opacity: 1;
+    pointer-events: all;
+    transition:
+        opacity 0.3s ease 0.2s,
+        background 0.2s,
+        border-color 0.2s;
+}
+
+.ob-arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.ob-arrow svg {
+    width: 18px;
+    height: 18px;
+}
+
+.ob-arrow--left {
+    left: 24px;
+}
+.ob-arrow--right {
+    right: 24px;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .ob-card {
+        width: 75%;
+        height: 400px;
+    }
+    .ob-card__content {
+        padding: 32px 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ob-card {
+        width: 86%;
+        height: 340px;
+        margin: 0 1%;
+    }
+    .ob-card__content {
+        padding: 24px 48px;
+    }
+    .ob-card__content h3 {
+        font-size: 1.1rem;
+    }
+    .ob-card__content p {
+        font-size: 0.8rem;
+    }
+    .ob-arrow {
+        width: 36px;
+        height: 36px;
+    }
+    .ob-arrow--left {
+        left: 12px;
+    }
+    .ob-arrow--right {
+        right: 12px;
+    }
+}
