@@ -1,0 +1,124 @@
+/* === accolades.css — infinite scrolling ticker === */
+
+.accolades-section {
+    position: relative;
+    background: #edf2f2;
+    overflow: hidden;
+}
+
+/* Teal border strips top and bottom */
+.accolades-strip {
+    height: 10px;
+    background: #4ecdc4;
+}
+
+/* Outer clip container */
+.accolades-track-outer {
+    overflow: hidden;
+    background: #4ecdc4; /* teal background = left/right border effect */
+    padding: 10px 0; /* top/bottom = strip thickness */
+}
+
+/* Track: two sets side by side, animates left */
+.accolades-track {
+    display: flex;
+    width: max-content;
+    animation: accoladeScroll 28s linear infinite;
+    background: #edf2f2; /* inner area matches section bg */
+    padding: 20px 0;
+}
+
+/* Pause on hover */
+.accolades-track:hover {
+    animation-play-state: paused;
+}
+
+/* Each set is a row of cards */
+.accolades-set {
+    display: flex;
+    gap: 0;
+    flex-shrink: 0;
+}
+
+/* Individual award card */
+.ac-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f4f8f8;
+    border: 1px solid rgba(26, 92, 107, 0.1);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin: 0 12px;
+    width: 340px;
+    flex-shrink: 0;
+    transition:
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+    cursor: default;
+}
+
+.ac-card:hover {
+    box-shadow: 0 8px 28px rgba(26, 92, 107, 0.14);
+    transform: translateY(-3px);
+}
+
+/* Trophy icon */
+.ac-icon {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+}
+
+.ac-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Text */
+.ac-text {
+    flex: 1;
+}
+
+.ac-text h4 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #0e3d49;
+    line-height: 1.3;
+    margin: 0 0 8px;
+}
+
+.ac-text p {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+/* Infinite scroll animation */
+@keyframes accoladeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .ac-card {
+        width: 280px;
+        padding: 18px 20px;
+    }
+    .ac-icon {
+        width: 56px;
+        height: 56px;
+    }
+    .ac-text h4 {
+        font-size: 0.84rem;
+    }
+    .ac-text p {
+        font-size: 0.72rem;
+    }
+}

@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="{{ asset('css/stats-orbit.css') }}">
     <link rel="stylesheet" href="{{ asset('css/critical-metals.css') }}">
     <link rel="stylesheet" href="{{ asset('css/our-businesses.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/home-sections.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/essence.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/our-locations.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/accolades.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/media-hub.css') }}">
+
 @endpush
 
 @section('content')
@@ -16,27 +20,27 @@
 <section class="hero" id="hero">
 
     <div class="slide is-active" id="slide-0">
-        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/corporate.jpg') }}')"></div>
+        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/sustainability.png') }}')"></div>
         <div class="slide-content"><h1>Build<br><strong>Future Positive</strong></h1></div>
     </div>
 
     <div class="slide" id="slide-1">
-        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/sustainability.jpg') }}')"></div>
+        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/sustainability.png') }}')"></div>
         <div class="slide-content"><h1>Responsible<br><strong>Sustainability</strong></h1></div>
     </div>
 
     <div class="slide" id="slide-2">
-        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/esg.jpg') }}')"></div>
+        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/esg.png') }}')"></div>
         <div class="slide-content"><h1>Committed to<br><strong>ESG Values</strong></h1></div>
     </div>
 
     <div class="slide" id="slide-3">
-        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/safety.jpg') }}')"></div>
+        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/safety.png') }}')"></div>
         <div class="slide-content"><h1>Built on Trust,<br><strong>Driven by Safety</strong></h1></div>
     </div>
 
     <div class="slide" id="slide-4">
-        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/diversity.jpg') }}')"></div>
+        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/diversity.png') }}')"></div>
         <div class="slide-content"><h1>Different Minds,<br><strong>One Direction</strong></h1></div>
     </div>
 
@@ -90,6 +94,18 @@
     {{-- Our Businesses carousel --}}
     @include('partials.sections.our-businesses')
 
+    {{-- Essence section --}}
+    @include('partials.sections.essence')
+
+    {{-- Our Locations --}}
+    @include('partials.sections.our-locations')
+
+    {{-- Accolades ticker --}}
+    @include('partials.sections.accolades')
+
+    {{-- Media Hub --}}
+    @include('partials.sections.media-hub')
+
     
 
 @endsection
@@ -99,5 +115,8 @@
     <script src="{{ asset('js/stats-orbit.js') }}"></script>
     <script src="{{ asset('js/critical-metals.js') }}"></script>
     <script src="{{ asset('js/our-businesses.js') }}"></script>
-    <script src="{{ asset('js/home-sections.js') }}"></script>
+    <script src="{{ asset('js/essence.js') }}"></script>
+    <script src="{{ asset('js/our-locations.js') }}"></script>
+    <script src="{{ asset('js/media-hub.js') }}"></script>
+
 @endpush

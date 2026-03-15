@@ -1,57 +1,88 @@
 <footer id="site-footer">
+
+    {{-- Watermark layer: PNG image --}}
+    <div class="footer__watermark" aria-hidden="true">
+        <img src="{{ asset('images/footer-watermark.png') }}" alt="" class="footer__wm-img">
+    </div>
+
+    {{-- Main nav columns --}}
     <div class="footer__top">
 
-        <div class="footer__brand">
-            <a href="{{ route('home') }}" class="footer__logo">
-                <svg viewBox="0 0 40 40" fill="white" width="36" height="36">
-                    <path d="M20 3C10.6 3 3 10.6 3 20s7.6 17 17 17 17-7.6 17-17S29.4 3 20 3zm0 3c7.7 0 14 6.3 14 14 0 3.3-1.2 6.4-3.1 8.7L11.3 9.1C13.6 6.2 16.6 4.7 20 6zm0 28C12.3 34 6 27.7 6 20c0-3.3 1.2-6.4 3.1-8.7l19.6 19.6C26.4 33 23.3 34 20 34z"/>
-                </svg>
-                <span>runaya</span>
-            </a>
-            <p class="footer__tagline">Build Future Positive</p>
-        </div>
-
+        {{-- About Us --}}
         <div class="footer__col">
-            <h4>Company</h4>
+            <h4 class="footer__col-title">About Us</h4>
             <ul>
+                <li><a href="{{ route('about.index') }}">Vision</a></li>
                 <li><a href="{{ route('about.index') }}">Who We Are</a></li>
-                <li><a href="{{ route('about.leadership') }}">Our Leadership</a></li>
-                <li><a href="{{ route('affiliates') }}">Our Affiliates</a></li>
-                <li><a href="{{ route('investor-relations') }}">Investor Relations</a></li>
+                <li><a href="{{ route('about.leadership') }}">Leadership Team</a></li>
             </ul>
+
+            <h4 class="footer__col-title footer__col-title--spaced">ESG</h4>
+
+            {{-- Social icons --}}
+            <div class="footer__social">
+                <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener" class="footer__social-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="X / Twitter" target="_blank" rel="noopener" class="footer__social-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Instagram" target="_blank" rel="noopener" class="footer__social-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+            </div>
         </div>
 
+        {{-- Our Businesses --}}
         <div class="footer__col">
-            <h4>Businesses</h4>
+            <h4 class="footer__col-title">Our Businesses</h4>
             <ul>
                 <li><a href="{{ route('businesses.aluminium') }}">Aluminium Recovery</a></li>
-                <li><a href="{{ route('businesses.critical-metal') }}">Critical Metal Recovery</a></li>
-                <li><a href="{{ route('businesses.mining') }}">Ground Support &amp; Mining</a></li>
-                <li><a href="{{ route('businesses.datacentre') }}">Datacentre Manufacturing</a></li>
-                <li><a href="{{ route('businesses.telecom') }}">Telecom Grade FRP</a></li>
+                <li><a href="{{ route('businesses.critical-metal') }}">Diversified Metal Recovery</a></li>
+                <li><a href="{{ route('businesses.datacentre') }}">Gas-Atomized Aluminium Powder</a></li>
+                <li><a href="{{ route('businesses.mining') }}">Ground Support &amp; Mining Solutions</a></li>
             </ul>
         </div>
 
+        {{-- Careers + Contact --}}
         <div class="footer__col">
-            <h4>ESG</h4>
+            <h4 class="footer__col-title">Careers</h4>
             <ul>
-                <li><a href="{{ route('esg.sustainability') }}">Sustainability</a></li>
-                <li><a href="{{ route('esg.sherises') }}">#SheRises</a></li>
-                <li><a href="{{ route('esg.safety') }}">Safety</a></li>
+                <li><a href="{{ route('careers.index') }}">Careers@Runaya</a></li>
+                <li><a href="{{ route('careers.life') }}">People Of Runaya</a></li>
+            </ul>
+
+            <h4 class="footer__col-title footer__col-title--spaced">Contact Us</h4>
+            <ul>
+                <li><a href="{{ route('contact') }}">Registered Office</a></li>
+                <li><a href="{{ route('contact') }}">Business Contact</a></li>
             </ul>
         </div>
 
+        {{-- Media --}}
         <div class="footer__col">
-            <h4>Connect</h4>
+            <h4 class="footer__col-title">Media</h4>
             <ul>
-                <li><a href="{{ route('careers.index') }}">Careers</a></li>
-                <li><a href="{{ route('media.index') }}">Media</a></li>
-                <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                <li><a href="{{ route('media.press') }}">Press Releases</a></li>
+                <li><a href="{{ route('media.index') }}">Media Coverages</a></li>
+                <li><a href="{{ route('media.index') }}">Media Contact</a></li>
+                <li><a href="{{ route('media.index') }}">Blogs</a></li>
             </ul>
         </div>
 
     </div>
 
+    {{-- Bottom bar --}}
     <div class="footer__bottom">
         <p>&copy; {{ date('Y') }} Runaya. All rights reserved.</p>
         <div class="footer__legal">
@@ -59,4 +90,15 @@
             <a href="{{ route('terms') }}">Terms of Use</a>
         </div>
     </div>
+
+    {{-- Product Enquiry floating button --}}
+    <a href="{{ route('contact') }}" class="footer__enquiry" aria-label="Product Enquiry">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <span>Product<br>Enquiry</span>
+    </a>
+
 </footer>

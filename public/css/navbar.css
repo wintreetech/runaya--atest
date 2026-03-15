@@ -29,22 +29,16 @@
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 8px;
     flex-shrink: 0;
     margin-right: 28px;
     text-decoration: none;
 }
 
-.nav-logo__icon {
-    width: 32px;
-    height: 32px;
-}
-
-.nav-logo__text {
-    font-size: 1.45rem;
-    font-weight: 700;
-    color: var(--white);
-    letter-spacing: -0.5px;
+.nav-logo__img {
+    height: 36px;
+    width: auto;
+    display: block;
+    object-fit: contain;
 }
 
 /* ── Nav links ───────────────────────────────────────────── */

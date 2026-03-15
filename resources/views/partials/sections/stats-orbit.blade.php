@@ -3,9 +3,10 @@
 
         <svg class="orbit-svg" viewBox="0 0 1200 560"
              xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
              preserveAspectRatio="xMidYMid meet">
 
-            {{-- DASHED SEMI-ARC: centre(600,530) rx=455 ry=410 --}}
+            {{-- DASHED SEMI-ARC only — no connector lines --}}
             <path
                 class="orbit-arc"
                 d="M 145,530 A 455,410 0 0 1 1055,530"
@@ -16,81 +17,50 @@
                 opacity="0.45"
             />
 
-            {{-- CONNECTOR LINES: short dashed lines from icon to arc --}}
-            <line class="orbit-connector" x1="252" y1="298" x2="252" y2="338" stroke="#1a5c6b" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.5"/>
-            <line class="orbit-connector" x1="948" y1="298" x2="948" y2="338" stroke="#1a5c6b" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.5"/>
-            <line class="orbit-connector" x1="161" y1="456" x2="161" y2="480" stroke="#1a5c6b" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.5"/>
-            <line class="orbit-connector" x1="1039" y1="456" x2="1039" y2="480" stroke="#1a5c6b" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.5"/>
-
             {{-- ICON: Water Positive — arc point (252, 266) --}}
             <g class="orbit-icon-group" id="iconWater" transform="translate(252,266)" style="cursor:pointer">
-                <circle r="32" fill="#1a5c6b" class="icon-circle"/>
-                <g transform="translate(-12,-12)">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2C8 8 5 11 5 15a7 7 0 0 0 14 0c0-4-3-7-7-13z"/>
-                        <path d="M9.5 16 11 13l2 2 2-4 1.5 1.5"/>
-                    </svg>
-                </g>
+                <image href="{{ asset('images/home/icons/water-energy.svg') }}"
+                       x="-30" y="-30" width="60" height="60"/>
             </g>
 
             {{-- ICON: Critical Metals — arc point (948, 266) --}}
             <g class="orbit-icon-group" id="iconMetals" transform="translate(948,266)" style="cursor:pointer">
-                <circle r="32" fill="#1a5c6b" class="icon-circle"/>
-                <g transform="translate(-12,-12)">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                    </svg>
-                </g>
+                <image href="{{ asset('images/home/icons/critical-metals.svg') }}"
+                       x="-30" y="-30" width="60" height="60"/>
             </g>
 
             {{-- ICON: CAGR — arc point (161, 424) --}}
             <g class="orbit-icon-group" id="iconCagr" transform="translate(161,424)" style="cursor:pointer">
-                <circle r="32" fill="#1a5c6b" class="icon-circle"/>
-                <g transform="translate(-12,-12)">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="3 17 7 11 11 14 15 8 21 8"/>
-                        <polyline points="18 8 21 8 21 11"/>
-                    </svg>
-                </g>
+                <image href="{{ asset('images/home/icons/cagr.svg') }}"
+                       x="-30" y="-30" width="60" height="60"/>
             </g>
 
             {{-- ICON: Women — arc point (1039, 424) --}}
             <g class="orbit-icon-group" id="iconWomen" transform="translate(1039,424)" style="cursor:pointer">
-                <circle r="32" fill="#1a5c6b" class="icon-circle"/>
-                <g transform="translate(-12,-12)">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                        <circle cx="12" cy="7" r="4"/>
-                    </svg>
-                </g>
+                <image href="{{ asset('images/home/icons/women.svg') }}"
+                       x="-30" y="-30" width="60" height="60"/>
             </g>
 
         </svg>
 
-        {{-- LABELS — positioned using % that match SVG coordinates --}}
-        {{-- icon SVG x / 1200 * 100 = left/right %, y / 560 * 100 = top % --}}
-
-        {{-- Water: SVG(252,266) → 21%,47.5% — label to the LEFT of icon --}}
+        {{-- LABELS --}}
         <div class="orbit-label orbit-label--tl" id="labelWater">
             Water Positive<br>Renewable<br>Energy
         </div>
 
-        {{-- Metals: SVG(948,266) → 79%,47.5% — label to the RIGHT of icon --}}
         <div class="orbit-label orbit-label--tr" id="labelMetals">
             Critical Metals<br>Recovered<br>Responsibly
         </div>
 
-        {{-- CAGR: SVG(161,424) → 13.4%,75.7% — label to the LEFT --}}
         <div class="orbit-label orbit-label--bl" id="labelCagr">
             Growing CAGR<br>of 40% since<br>inception
         </div>
 
-        {{-- Women: SVG(1039,424) → 86.6%,75.7% — label to the RIGHT --}}
         <div class="orbit-label orbit-label--br" id="labelWomen">
             55% Women<br>Employees<br>and Leaders
         </div>
 
-        {{-- Globe —  centred at bottom of arc --}}
+        {{-- Globe --}}
         <div class="orbit-globe-wrap">
             <img src="{{ asset('images/home/globe-hands.gif') }}" alt="Globe in hands" class="orbit-globe"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">

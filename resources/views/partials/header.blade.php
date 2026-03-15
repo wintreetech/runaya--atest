@@ -1,10 +1,7 @@
 <nav id="navbar" role="navigation" aria-label="Main navigation">
 
     <a href="{{ route('home') }}" class="nav-logo" aria-label="Runaya Home">
-        <svg class="nav-logo__icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="white">
-            <path d="M20 3C10.6 3 3 10.6 3 20s7.6 17 17 17 17-7.6 17-17S29.4 3 20 3zm0 3c7.7 0 14 6.3 14 14 0 3.3-1.2 6.4-3.1 8.7L11.3 9.1C13.6 6.2 16.6 4.7 20 6zm0 28C12.3 34 6 27.7 6 20c0-3.3 1.2-6.4 3.1-8.7l19.6 19.6C26.4 33 23.3 34 20 34z"/>
-        </svg>
-        <span class="nav-logo__text">runaya</span>
+        <img src="{{ asset('images/logo.png') }}" alt="Runaya" class="nav-logo__img">
     </a>
 
     <ul class="nav-links">
