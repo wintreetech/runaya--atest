@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/stats-orbit.css') }}">
     <link rel="stylesheet" href="{{ asset('css/critical-metals.css') }}">
     <link rel="stylesheet" href="{{ asset('css/our-businesses.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/facility-carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('css/essence.css') }}">
     <link rel="stylesheet" href="{{ asset('css/our-locations.css') }}">
     <link rel="stylesheet" href="{{ asset('css/accolades.css') }}">
@@ -94,6 +95,14 @@
     {{-- Our Businesses carousel --}}
     @include('partials.sections.our-businesses')
 
+    {{-- Safety Core full-width image --}}
+    <div class="safety-core-img">
+        <img src="{{ asset('images/home/safety-core.png') }}" alt="Safety Core">
+    </div>
+
+    {{-- Facility carousel --}}
+    @include('partials.sections.facility-carousel')
+
     {{-- Essence section --}}
     @include('partials.sections.essence')
 
@@ -106,7 +115,6 @@
     {{-- Media Hub --}}
     @include('partials.sections.media-hub')
 
-    
 
 @endsection
 
@@ -115,8 +123,8 @@
     <script src="{{ asset('js/stats-orbit.js') }}"></script>
     <script src="{{ asset('js/critical-metals.js') }}"></script>
     <script src="{{ asset('js/our-businesses.js') }}"></script>
+    <script src="{{ asset('js/facility-carousel.js') }}"></script>
     <script src="{{ asset('js/essence.js') }}"></script>
     <script src="{{ asset('js/our-locations.js') }}"></script>
     <script src="{{ asset('js/media-hub.js') }}"></script>
-
 @endpush

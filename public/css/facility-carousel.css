@@ -1,0 +1,206 @@
+/* === facility-carousel.css === */
+
+.fc-section {
+    width: 100%;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Track outer — clips slides ─────────────────────────── */
+.fc-track-outer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ── Track — flex row, JS slides it ────────────────────── */
+.fc-track {
+    display: flex;
+    transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+/* ── Individual slide ────────────────────────────────────── */
+.fc-slide {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+
+/* Image */
+.fc-img {
+    position: absolute;
+    inset: 0;
+}
+
+.fc-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.65s ease;
+}
+
+.fc-slide.is-active .fc-img img {
+    transform: scale(1.02);
+}
+
+/* Dark gradient overlay — bottom heavy for text legibility */
+.fc-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.72) 0%,
+        rgba(0, 0, 0, 0.3) 40%,
+        transparent 75%
+    );
+    pointer-events: none;
+}
+
+/* ── Content — bottom of slide ───────────────────────────── */
+.fc-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 28px 56px 32px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.fc-title {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0;
+    max-width: 55%;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Location label — bottom right */
+.fc-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.fc-location svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* ── Arrows ──────────────────────────────────────────────── */
+.fc-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.55);
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        border-color 0.2s,
+        transform 0.2s;
+    backdrop-filter: blur(4px);
+}
+
+.fc-arrow:hover {
+    background: rgba(0, 0, 0, 0.55);
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.fc-arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
+.fc-arrow--left {
+    left: 28px;
+}
+.fc-arrow--right {
+    right: 28px;
+}
+
+/* ── Orange bottom bar + dots ────────────────────────────── */
+.fc-dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    z-index: 5;
+}
+
+.fc-dot {
+    flex: 1;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.fc-dot.is-active {
+    background: #e8521a;
+}
+.fc-dot:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .fc-slide {
+        height: 380px;
+    }
+    .fc-content {
+        padding: 20px 24px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .fc-title {
+        font-size: 1.4rem;
+        max-width: 100%;
+    }
+    .fc-arrow--left {
+        left: 12px;
+    }
+    .fc-arrow--right {
+        right: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fc-slide {
+        height: 300px;
+    }
+    .fc-title {
+        font-size: 1.2rem;
+    }
+    .fc-arrow {
+        width: 38px;
+        height: 38px;
+    }
+}

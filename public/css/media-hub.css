@@ -2,16 +2,16 @@
 
 .mh-section {
     background: #071e27;
-    padding: 60px 48px 72px;
+    padding: 60px 0 72px;
 }
 
 /* ── 3-column grid ───────────────────────────────────────── */
 .mh-inner {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 0.65fr 1fr 1fr;
     gap: 24px;
-    max-width: 1280px;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 24px;
     align-items: start;
 }
 
@@ -218,6 +218,10 @@
     .mh-inner {
         grid-template-columns: 1fr;
         max-width: 520px;
+        margin: 0 auto;
+    }
+    .mh-section {
+        padding: 48px 0 60px;
     }
     .mh-section {
         padding: 48px 24px 60px;

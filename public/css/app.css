@@ -101,7 +101,7 @@ ol {
 
 /* ── Column titles ───────────────────────────────── */
 .footer__col-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 18px;
@@ -120,7 +120,7 @@ ol {
 }
 
 .footer__col li a {
-    font-size: 0.98rem;
+    font-size: 0.88rem;
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
     transition: color 0.2s;
@@ -258,4 +258,22 @@ ol {
         width: 62px;
         height: 62px;
     }
+}
+
+/* ── Safety Core full-width image ───────────────────────── */
+.safety-core-img {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.safety-core-img img {
+    width: 100%;
+    height: auto;
+    display: block;
 }

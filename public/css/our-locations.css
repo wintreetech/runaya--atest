@@ -177,13 +177,12 @@
     filter: drop-shadow(0 12px 32px rgba(26, 92, 107, 0.3));
 }
 
-/* India fill */
-.india-shape {
-    fill: #1a5c6b;
-    stroke: rgba(255, 255, 255, 0.22);
-    stroke-width: 1.5;
-    stroke-linejoin: round;
+/* Tint map to #507989 while keeping white state borders visible */
+.loc-pins-svg image {
+    filter: sepia(1) saturate(1.2) hue-rotate(157deg) brightness(0.72);
 }
+
+/* Remove old india-shape since map now uses image tag */
 
 /* ── Pins ────────────────────────────────────────────────── */
 .map-pin {

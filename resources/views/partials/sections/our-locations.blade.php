@@ -35,93 +35,63 @@
             </div>
         </div>
 
-        {{-- RIGHT: India map using object tag (loads real SVG from public) --}}
+        {{-- RIGHT: Real SimpleMaps India SVG + pins overlay --}}
         <div class="loc-right">
             <div class="loc-map-container" id="locMapContainer">
 
                 {{--
-                    Pin positions calculated from lat/lon → SVG px:
-                    ViewBox 650×750, India bounds: lat 8–37°N, lon 68–98°E
+                    SimpleMaps SVG viewBox="0 0 1000 1000"
+                    Pin coordinates calculated from lat/lon using state anchor points:
 
-                    x = (lon - 68) / 30 * 500 + 75
-                    y = (37 - lat) / 29 * 660 + 30
-
-                    Mumbai     19.08°N 72.88°E → x=147, y=424
-                    Jharsuguda 21.85°N 84.00°E → x=333, y=367
-                    Korba      22.36°N 82.70°E → x=311, y=355
-                    Chanderiya 24.88°N 74.63°E → x=177, y=281
-                    Bhilwara   25.35°N 74.63°E → x=177, y=271
+                    Mumbai     (19.08N, 72.88E) → (238.7, 622.7)
+                    Jharsuguda (21.85N, 84.06E) → (501.4, 500.8)
+                    Korba      (22.36N, 82.70E) → (469.4, 478.4)
+                    Chanderiya (24.88N, 74.63E) → (279.8, 367.5)
+                    Bhilwara   (25.35N, 74.63E) → (279.8, 346.8)
                 --}}
 
-                <svg id="locPinsSvg" class="loc-pins-svg" viewBox="0 0 650 750"
+                <svg id="locPinsSvg" class="loc-pins-svg" viewBox="0 0 1000 1000"
                      xmlns="http://www.w3.org/2000/svg">
 
-                    {{-- India shape — proper outline --}}
-                    <path class="india-shape" d="
-                        M 309,35 C 318,30 334,26 349,30 C 365,34 378,27 394,33
-                        C 410,39 424,33 438,42 C 450,50 462,44 474,54
-                        C 484,62 493,72 501,84 C 509,96 515,110 520,124
-                        C 525,138 527,152 530,167 C 533,182 530,196 536,211
-                        C 540,224 537,238 542,252 C 544,264 538,276 530,287
-                        C 521,299 510,310 497,322 C 483,335 468,348 452,362
-                        C 435,377 417,393 399,410 C 380,427 361,445 341,463
-                        C 320,482 298,501 278,519 C 261,535 247,551 237,565
-                        C 229,577 223,588 220,597 C 217,606 216,614 215,620
-                        C 211,611 206,599 199,585 C 190,568 178,551 165,534
-                        C 151,516 136,498 122,481 C 109,464 97,447 87,430
-                        C 78,413 71,396 67,378 C 63,360 62,342 63,324
-                        C 64,306 68,288 68,271 C 68,255 64,239 62,223
-                        C 61,208 62,193 66,179 C 63,165 68,151 66,136
-                        C 70,121 68,106 75,93 C 82,79 92,68 103,58
-                        C 114,48 127,41 141,36 C 155,31 170,28 186,27
-                        C 202,26 218,27 233,26 C 248,25 262,30 276,27
-                        C 290,24 302,31 309,35 Z
-                    "/>
-                    {{-- Northeast states --}}
-                    <path class="india-shape" d="
-                        M 488,150 C 500,143 515,147 524,158
-                        C 532,170 528,184 516,190
-                        C 504,196 490,190 484,178
-                        C 478,166 480,156 488,150 Z
-                    "/>
-                    {{-- Andaman (tiny) --}}
-                    <ellipse class="india-shape" cx="548" cy="460" rx="8" ry="14"/>
+                    {{-- Real India map paths embedded from SimpleMaps --}}
+                    <image href="{{ asset('images/india-map.svg') }}"
+                           x="0" y="0" width="1000" height="1000"/>
 
-                    {{-- PINS --}}
+                    {{-- PINS — on top of the map image --}}
 
-                    {{-- Mumbai 19.08N 72.88E → (147, 424) --}}
-                    <g class="map-pin" data-loc="mumbai" transform="translate(147,424)">
-                        <line x1="0" y1="-26" x2="0" y2="0" class="pin-stem"/>
-                        <circle r="12" class="pin-outer"/>
-                        <circle r="6"  class="pin-inner"/>
+                    {{-- Mumbai (238.7, 622.7) --}}
+                    <g class="map-pin" data-loc="mumbai" transform="translate(238.7,622.7)">
+                        <line x1="0" y1="0" x2="0" y2="28" class="pin-stem"/>
+                        <circle r="14" class="pin-outer"/>
+                        <circle r="7"  class="pin-inner"/>
                     </g>
 
-                    {{-- Jharsuguda 21.85N 84.00E → (333, 367) --}}
-                    <g class="map-pin" data-loc="jharsuguda" transform="translate(333,367)">
-                        <line x1="0" y1="-24" x2="0" y2="0" class="pin-stem"/>
-                        <circle r="12" class="pin-outer"/>
-                        <circle r="6"  class="pin-inner"/>
+                    {{-- Jharsuguda (501.4, 500.8) --}}
+                    <g class="map-pin" data-loc="jharsuguda" transform="translate(501.4,500.8)">
+                        <line x1="0" y1="0" x2="0" y2="26" class="pin-stem"/>
+                        <circle r="14" class="pin-outer"/>
+                        <circle r="7"  class="pin-inner"/>
                     </g>
 
-                    {{-- Korba 22.36N 82.70E → (311, 355) --}}
-                    <g class="map-pin" data-loc="korba" transform="translate(311,355)">
-                        <line x1="0" y1="-24" x2="0" y2="0" class="pin-stem"/>
-                        <circle r="12" class="pin-outer"/>
-                        <circle r="6"  class="pin-inner"/>
+                    {{-- Korba (469.4, 478.4) --}}
+                    <g class="map-pin" data-loc="korba" transform="translate(469.4,478.4)">
+                        <line x1="0" y1="0" x2="0" y2="26" class="pin-stem"/>
+                        <circle r="14" class="pin-outer"/>
+                        <circle r="7"  class="pin-inner"/>
                     </g>
 
-                    {{-- Chanderiya/Chittorgarh 24.88N 74.63E → (177, 281) --}}
-                    <g class="map-pin is-active" data-loc="chanderiya" transform="translate(177,281)">
-                        <line x1="0" y1="-26" x2="0" y2="0" class="pin-stem"/>
-                        <circle r="12" class="pin-outer"/>
-                        <circle r="6"  class="pin-inner"/>
+                    {{-- Chanderiya/Chittorgarh (279.8, 367.5) --}}
+                    <g class="map-pin is-active" data-loc="chanderiya" transform="translate(279.8,367.5)">
+                        <line x1="0" y1="0" x2="0" y2="28" class="pin-stem"/>
+                        <circle r="14" class="pin-outer"/>
+                        <circle r="7"  class="pin-inner"/>
                     </g>
 
-                    {{-- Bhilwara 25.35N 74.63E → (177, 270) --}}
-                    <g class="map-pin" data-loc="bhilwara" transform="translate(177,270)">
-                        <line x1="0" y1="-22" x2="0" y2="0" class="pin-stem"/>
-                        <circle r="12" class="pin-outer"/>
-                        <circle r="6"  class="pin-inner"/>
+                    {{-- Bhilwara (279.8, 346.8) --}}
+                    <g class="map-pin" data-loc="bhilwara" transform="translate(279.8,346.8)">
+                        <line x1="0" y1="0" x2="0" y2="24" class="pin-stem"/>
+                        <circle r="14" class="pin-outer"/>
+                        <circle r="7"  class="pin-inner"/>
                     </g>
 
                 </svg>
