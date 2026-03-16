@@ -107,23 +107,25 @@
 .essence-text-inner {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
     width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 .essence-label-text {
-    font-size: 1.15rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #ffffff;
     margin: 0;
+    padding-top: 32px;
+    align-self: center;
 }
 
 .essence-icon {
-    width: 32px;
-    height: 32px;
-    opacity: 0.85;
-    flex-shrink: 0;
+    display: none;
 }
 
 .essence-icon svg {
@@ -131,34 +133,44 @@
     height: 100%;
 }
 
+/* Bottom group: desc + button pinned to bottom */
+.essence-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 32px;
+    width: 100%;
+}
+
 .essence-desc {
-    font-size: 0.82rem;
-    line-height: 1.72;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.98rem;
+    line-height: 1.78;
+    color: rgba(255, 255, 255, 0.88);
     margin: 0;
 }
 
 .essence-btn {
     display: inline-block;
-    margin-top: 6px;
-    background: transparent;
-    color: #ffffff;
-    font-size: 0.7rem;
+    margin-top: 0;
+    background: #f2f2f2;
+    color: #021c25;
+    font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     padding: 10px 24px;
     border-radius: 40px;
     text-decoration: none;
-    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    border: none;
     transition:
         background 0.2s,
         border-color 0.2s;
 }
 
 .essence-btn:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.85);
+    border-color: #f2f2f2;
 }
 
 /* ── Responsive ──────────────────────────────────────────── */

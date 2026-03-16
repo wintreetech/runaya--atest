@@ -2,7 +2,8 @@
 
 .loc-section {
     position: relative;
-    background: #dff0ee;
+    background: url("/images/home/locations-bg.png") center center / cover
+        no-repeat;
     padding: 70px 60px 80px;
     overflow: hidden;
 }
@@ -10,10 +11,7 @@
 .loc-pattern {
     position: absolute;
     inset: 0;
-    background-image:
-        linear-gradient(rgba(26, 92, 107, 0.12) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(26, 92, 107, 0.12) 1px, transparent 1px);
-    background-size: 36px 36px;
+    background: rgba(223, 240, 238, 0.72);
     pointer-events: none;
 }
 

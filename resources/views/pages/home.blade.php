@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/our-locations.css') }}">
     <link rel="stylesheet" href="{{ asset('css/accolades.css') }}">
     <link rel="stylesheet" href="{{ asset('css/media-hub.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/safety-core.css') }}">
 
 @endpush
 
@@ -21,9 +22,13 @@
 <section class="hero" id="hero">
 
     <div class="slide is-active" id="slide-0">
-        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/sustainability.png') }}')"></div>
-        <div class="slide-content"><h1>Build<br><strong>Future Positive</strong></h1></div>
+    <div class="slide-bg">
+        <video autoplay muted loop playsinline class="slide-video">
+            <source src="{{ asset('videos/corporate-banner.mp4') }}" type="video/mp4">
+        </video>
     </div>
+    <div class="slide-content"><h1>Build<br><strong>Future Positive</strong></h1></div>
+</div>
 
     <div class="slide" id="slide-1">
         <div class="slide-bg" style="background-image: url('{{ asset('images/hero/sustainability.png') }}')"></div>
@@ -95,10 +100,8 @@
     {{-- Our Businesses carousel --}}
     @include('partials.sections.our-businesses')
 
-    {{-- Safety Core full-width image --}}
-    <div class="safety-core-img">
-        <img src="{{ asset('images/home/safety-core.png') }}" alt="Safety Core">
-    </div>
+    {{-- Safety Core section --}}
+    @include('partials.sections.safety-core')
 
     {{-- Facility carousel --}}
     @include('partials.sections.facility-carousel')

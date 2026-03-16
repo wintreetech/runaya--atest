@@ -14,7 +14,6 @@
     background: #0d3d49;
 }
 
-/* SVG fills card width, height auto from 1200:720 ratio */
 .cm-svg {
     display: block;
     width: 100%;
@@ -24,18 +23,14 @@
 /* Title */
 .cm-svg-title {
     font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 52px;
+    font-size: 56px;
     font-weight: 800;
     fill: #ffffff;
     text-anchor: middle;
-    dominant-baseline: middle;
+    dominant-baseline: auto;
 }
 
-/* Wave path — GSAP animates stroke-dashoffset */
-.cm-wave-path {
-}
-
-/* Mineral circle hover — spring scale */
+/* ── Mineral group ────────────────────────────────────────── */
 .cm-mineral-g {
     cursor: pointer;
     transform-box: fill-box;
@@ -44,12 +39,25 @@
         transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
         filter 0.3s ease;
 }
+
 .cm-mineral-g:hover {
-    transform: scale(1.12);
-    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.55));
+    transform: scale(1.1);
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.5));
 }
 
-/* Placeholder hidden by default */
+/* Circle stroke brightens on hover */
+.cm-mineral-g .cm-circle-el {
+    transition:
+        stroke 0.3s ease,
+        fill 0.3s ease;
+}
+
+.cm-mineral-g:hover .cm-circle-el {
+    stroke: rgba(255, 255, 255, 0.7);
+    fill: rgba(255, 255, 255, 0.18);
+}
+
+/* Placeholder */
 .cm-img-placeholder {
     opacity: 0;
     pointer-events: none;
@@ -58,26 +66,39 @@
     opacity: 1;
 }
 
-/* Mineral name labels */
+/* ── Labels — low opacity default, full on hover ─────────── */
 .cm-label {
     font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 18px;
     font-weight: 500;
-    fill: rgba(255, 255, 255, 0.75);
+    fill: rgba(255, 255, 255, 0.38);
     text-anchor: middle;
     pointer-events: none;
+    transition: fill 0.3s ease;
 }
 
-/* Body text inside foreignObject */
+.cm-label--lg {
+    font-size: 22px;
+}
+.cm-label--md {
+    font-size: 20px;
+}
+
+/* Labels brighten when sibling mineral-g is hovered
+   We use JS to toggle a class on the text element */
+.cm-label.is-hovered {
+    fill: rgba(255, 255, 255, 1);
+}
+
+/* ── Body text ────────────────────────────────────────────── */
 .cm-body-fo {
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 14px;
-    line-height: 1.82;
-    color: rgba(255, 255, 255, 0.75);
-    text-align: start;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.78);
+    text-align: left;
 }
 
-/* Button wrapper inside foreignObject */
+/* ── Button ───────────────────────────────────────────────── */
 .cm-btn-fo {
     display: flex;
     justify-content: center;
@@ -98,16 +119,14 @@
     border-radius: 40px;
     text-decoration: none;
     border: 1.5px solid rgba(255, 255, 255, 0.25);
-    transition:
-        background 0.25s,
-        transform 0.2s;
+    transition: background 0.25s;
     white-space: nowrap;
     transform: translate(0, 0) !important;
 }
+
 .cm-btn:hover {
     background: #e8521a;
     border-color: #e8521a;
-    transform: translateY(-2px);
 }
 
 /* Responsive */
@@ -118,13 +137,17 @@
     .cm-svg-title {
         font-size: 36px;
     }
-    .cm-label {
+    .cm-label--lg {
+        font-size: 16px;
+    }
+    .cm-label--md {
         font-size: 14px;
     }
     .cm-body-fo {
         font-size: 12px;
     }
 }
+
 @media (max-width: 600px) {
     .cm-section {
         padding: 12px 12px 36px;
@@ -132,7 +155,10 @@
     .cm-svg-title {
         font-size: 26px;
     }
-    .cm-label {
+    .cm-label--lg {
+        font-size: 13px;
+    }
+    .cm-label--md {
         font-size: 11px;
     }
 }

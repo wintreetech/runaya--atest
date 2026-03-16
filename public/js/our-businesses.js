@@ -1,50 +1,111 @@
-/* === our-businesses.js — centre-peek carousel, auto 3s === */
+/* === our-businesses.js — true infinite circular carousel === */
 document.addEventListener("DOMContentLoaded", function () {
     var section = document.getElementById("ourBusinesses");
     if (!section) return;
 
     var track = document.getElementById("obTrack");
-    var cards = Array.from(track.querySelectorAll(".ob-card"));
-    var total = cards.length;
-    var current = 0;
+    var origCards = Array.from(track.querySelectorAll(".ob-card"));
+    var total = origCards.length;
+    var DURATION = 3000;
     var autoTimer = null;
-    var DURATION = 3000; // 3 seconds
+    var isAnimating = false;
 
-    /* ── Calculate offset so active card is centred ─────── */
+    /* ── Clone cards for infinite loop ──────────────────────
+       Layout: [clones of last N] [originals] [clones of first N]
+       N = total cards cloned on each side
+    ────────────────────────────────────────────────────────── */
+    var clonesBefore = [];
+    var clonesAfter = [];
+
+    // Clone all originals and append/prepend
+    origCards.forEach(function (card) {
+        var cloneAfter = card.cloneNode(true);
+        cloneAfter.classList.add("ob-clone");
+        cloneAfter.setAttribute("aria-hidden", "true");
+        clonesAfter.push(cloneAfter);
+        track.appendChild(cloneAfter);
+    });
+
+    origCards.forEach(function (card) {
+        var cloneBefore = card.cloneNode(true);
+        cloneBefore.classList.add("ob-clone");
+        cloneBefore.setAttribute("aria-hidden", "true");
+        clonesBefore.unshift(cloneBefore);
+        track.insertBefore(cloneBefore, track.firstChild);
+    });
+
+    // All cards now (clones before + originals + clones after)
+    var allCards = Array.from(track.querySelectorAll(".ob-card"));
+
+    // Current index starts at first real card (index = total, after prepended clones)
+    var current = total; // points to first original card
+
+    /* ── Re-wire arrow buttons on clones ─────────────────── */
+    function wireArrows() {
+        track.querySelectorAll(".ob-arrow--left").forEach(function (btn) {
+            btn.onclick = function (e) {
+                e.stopPropagation();
+                stopAuto();
+                goTo(current - 1);
+                startAuto();
+            };
+        });
+        track.querySelectorAll(".ob-arrow--right").forEach(function (btn) {
+            btn.onclick = function (e) {
+                e.stopPropagation();
+                goTo(current + 1);
+                startAuto();
+            };
+        });
+    }
+
+    /* ── Get px offset to centre card[idx] ───────────────── */
     function getOffset(idx) {
         var wrapperW = track.parentElement.offsetWidth;
-        var cardW = cards[idx].offsetWidth;
-        var cardLeft = cards[idx].offsetLeft;
-        /* centre = wrapper half - card half - card's left position */
-        return wrapperW / 2 - cardW / 2 - cardLeft;
+        var card = allCards[idx];
+        if (!card) return 0;
+        return wrapperW / 2 - card.offsetWidth / 2 - card.offsetLeft;
     }
 
-    /* ── Go to slide ─────────────────────────────────────── */
-    function goTo(idx) {
-        if (idx < 0) idx = total - 1;
-        if (idx >= total) idx = 0;
-        current = idx;
-
-        /* Update active class */
-        cards.forEach(function (card, i) {
-            card.classList.toggle("is-active", i === current);
+    /* ── Update active class ─────────────────────────────── */
+    function updateActive(idx) {
+        allCards.forEach(function (c, i) {
+            c.classList.toggle("is-active", i === idx);
         });
-
-        /* GSAP slide track */
-        if (typeof gsap !== "undefined") {
-            gsap.to(track, {
-                x: getOffset(current),
-                duration: 0.65,
-                ease: "power3.inOut",
-            });
-        } else {
-            track.style.transform = "translateX(" + getOffset(current) + "px)";
-        }
     }
 
-    /* ── Init ────────────────────────────────────────────── */
-    function init() {
-        goTo(0);
+    /* ── Instant jump (no animation) ────────────────────── */
+    function jumpTo(idx) {
+        current = idx;
+        updateActive(current);
+        gsap.set(track, { x: getOffset(current) });
+    }
+
+    /* ── Animated go to ─────────────────────────────────── */
+    function goTo(idx) {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        current = idx;
+        updateActive(current);
+
+        gsap.to(track, {
+            x: getOffset(current),
+            duration: 0.65,
+            ease: "power3.inOut",
+            onComplete: function () {
+                isAnimating = false;
+
+                // If we've slid into the clones-after zone → jump back silently
+                if (current >= total * 2) {
+                    jumpTo(current - total);
+                }
+                // If we've slid into the clones-before zone → jump forward silently
+                else if (current < total) {
+                    jumpTo(current + total);
+                }
+            },
+        });
     }
 
     /* ── Auto scroll ─────────────────────────────────────── */
@@ -59,27 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (autoTimer) clearInterval(autoTimer);
     }
 
-    /* ── Arrow buttons (one pair per card, all wired) ────── */
-    section.querySelectorAll(".ob-arrow--left").forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
-            e.stopPropagation();
-            stopAuto();
-            goTo(current - 1);
-            startAuto();
-        });
-    });
-
-    section.querySelectorAll(".ob-arrow--right").forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
-            e.stopPropagation();
-            stopAuto();
-            goTo(current + 1);
-            startAuto();
-        });
-    });
-
-    /* ── Click side card to navigate to it ──────────────── */
-    cards.forEach(function (card, i) {
+    /* ── Click side card ─────────────────────────────────── */
+    allCards.forEach(function (card, i) {
         card.addEventListener("click", function () {
             if (i !== current) {
                 stopAuto();
@@ -103,23 +145,23 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         { passive: true },
     );
-
     track.addEventListener("touchend", function (e) {
         var diff = startX - e.changedTouches[0].clientX;
         if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
         startAuto();
     });
 
-    /* ── Recalc on resize ────────────────────────────────── */
+    /* ── Resize ──────────────────────────────────────────── */
     window.addEventListener("resize", function () {
-        goTo(current);
+        jumpTo(current);
     });
 
     /* ── Boot ────────────────────────────────────────────── */
-    init();
+    wireArrows();
+    jumpTo(current); // start at first real card, no animation
     startAuto();
 
-    /* ── Section entrance animation ─────────────────────── */
+    /* ── Entrance animation ──────────────────────────────── */
     if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
         gsap.registerPlugin(ScrollTrigger);
         gsap.from(".ob-heading", {
@@ -127,14 +169,6 @@ document.addEventListener("DOMContentLoaded", function () {
             y: 30,
             duration: 0.7,
             ease: "power3.out",
-            scrollTrigger: { trigger: section, start: "top 85%" },
-        });
-        gsap.from(".ob-track", {
-            opacity: 0,
-            y: 50,
-            duration: 0.9,
-            ease: "power3.out",
-            delay: 0.2,
             scrollTrigger: { trigger: section, start: "top 85%" },
         });
     }

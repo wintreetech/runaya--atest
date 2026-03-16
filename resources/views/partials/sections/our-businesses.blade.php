@@ -46,8 +46,8 @@
                 <div class="ob-card__overlay"></div>
                 <div class="ob-card__content">
                     <h3>Critical Metal Recovery</h3>
-                    <p>Recovering critical metals responsibly to support India's manufacturing and energy transition
-                    goals with 100% renewable-powered operations at scale.</p>
+                    <p>Runaya’s critical metal recovery business delivers value from complex industrial residues through advanced recovery technologies that convert underutilised materials into essential resources for modern industries.
+</p>
                     <a href="{{ route('businesses.critical-metal') }}" class="ob-btn">KNOW MORE</a>
                 </div>
                 <button class="ob-arrow ob-arrow--left" aria-label="Previous">
@@ -62,17 +62,16 @@
                 </button>
             </div>
 
-            {{-- Card 3: Ground Support & Mining --}}
+            {{-- Card 3: Gas Atomized Aluminium Powder --}}
             <div class="ob-card" data-index="2">
                 <div class="ob-card__bg">
                     <img src="{{ asset('images/home/businesses/gas-atomized-aluminium-powder.png') }}" alt="Ground Support & Mining">
                 </div>
                 <div class="ob-card__overlay"></div>
                 <div class="ob-card__content">
-                    <h3>Ground Support &amp; Mining Solutions</h3>
-                    <p>Delivering advanced ground support solutions for safer and more efficient mining
-                    operations across India's leading mines.</p>
-                    <a href="{{ route('businesses.mining') }}" class="ob-btn">KNOW MORE</a>
+                    <h3>Gas Atomized Aluminium Powder</h3>
+                    <p>Runaya’s gas atomized aluminium powder business delivers high purity aluminium powders through advanced atomization technology that supports applications across additive manufacturing, automotive, coatings, and specialised industrial uses.</p>
+                    <a href="{{ route('businesses.aluminium') }}" class="ob-btn">KNOW MORE</a>
                 </div>
                 <button class="ob-arrow ob-arrow--left" aria-label="Previous">
                     <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -86,16 +85,15 @@
                 </button>
             </div>
 
-            {{-- Card 4: Datacentre Manufacturing --}}
+            {{-- Card 4: Ground Support Solutions --}}
             <div class="ob-card" data-index="3">
                 <div class="ob-card__bg">
                     <img src="{{ asset('images/home/businesses/ground-support-solutions.png') }}" alt="Datacentre Manufacturing">
                 </div>
                 <div class="ob-card__overlay"></div>
                 <div class="ob-card__content">
-                    <h3>Datacentre &amp; FRP Manufacturing</h3>
-                    <p>Telecom-grade FRP infrastructure and datacentre manufacturing solutions
-                    powering India's growing digital and connectivity backbone.</p>
+                    <h3>Ground Support Solutions</h3>
+                    <p>Runaya’s ground support solutions business delivers advanced reinforcement systems for underground mining through engineered ground support technologies that enhance structural stability and improve operational safety.</p>
                     <a href="{{ route('businesses.datacentre') }}" class="ob-btn">KNOW MORE</a>
                 </div>
                 <button class="ob-arrow ob-arrow--left" aria-label="Previous">

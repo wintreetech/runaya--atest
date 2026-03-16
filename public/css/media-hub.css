@@ -25,6 +25,27 @@
     min-height: 480px;
 }
 
+/* Change View All button color when card is hovered */
+.mh-view-all--orange {
+    background: #0e3d49; /* green default */
+}
+
+/* Hover entire card → bottom button turns orange */
+.mh-card:hover .mh-view-all--orange,
+.mh-card:hover .mh-footer {
+    background: #e8521a;
+}
+
+/* Keep text white */
+.mh-card:hover .mh-view-all--teal,
+.mh-card:hover .mh-view-all--orange {
+    color: #ffffff;
+}
+.mh-footer,
+.mh-view-all--orange {
+    transition: background 0.25s ease;
+}
+
 .mh-heading {
     font-size: 1.35rem;
     font-weight: 800;
@@ -71,7 +92,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: #e8521a;
+    background: #0e3d49;
     color: #ffffff;
     font-size: 0.85rem;
     font-weight: 700;

@@ -11,7 +11,7 @@
                 </div>
                 <div class="fc-overlay"></div>
                 <div class="fc-content">
-                    <h3 class="fc-title">Aluminium Recovery Business</h3>
+                    <h3 class="fc-title">Aluminium Recovery<br>Business</h3>
                     <span class="fc-location">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="fc-overlay"></div>
                 <div class="fc-content">
-                    <h3 class="fc-title">Critical Metal Recovery Business</h3>
+                    <h3 class="fc-title">Critical Metal<br>Recovery Business</h3>
                     <span class="fc-location">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="fc-overlay"></div>
                 <div class="fc-content">
-                    <h3 class="fc-title">Ground Support and Mining Solutions</h3>
+                    <h3 class="fc-title">Ground Support and<br>Mining Solutions</h3>
                     <span class="fc-location">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="fc-overlay"></div>
                 <div class="fc-content">
-                    <h3 class="fc-title">Datacentre &amp; FRP Manufacturing</h3>
+                    <h3 class="fc-title">Datacentre &amp;<br>FRP Manufacturing</h3>
                     <span class="fc-location">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
@@ -78,7 +78,6 @@
 
         </div>
 
-        {{-- Arrows — vertically centred on the image --}}
         <button class="fc-arrow fc-arrow--left" id="fcPrev" aria-label="Previous facility">
             <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="15 18 9 12 15 6"/>
@@ -90,7 +89,6 @@
             </svg>
         </button>
 
-        {{-- Progress dots --}}
         <div class="fc-dots" id="fcDots">
             <span class="fc-dot is-active" data-index="0"></span>
             <span class="fc-dot" data-index="1"></span>

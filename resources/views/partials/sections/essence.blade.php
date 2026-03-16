@@ -12,7 +12,7 @@
         --}}
 
         {{-- SUSTAINABILITY --}}
-        <div class="essence-panel is-active" data-index="0" id="essPanel0">
+        <div class="essence-panel" data-index="0" id="essPanel0">
             {{-- Text face (shown when active) --}}
             <div class="essence-face essence-face--text">
                 <div class="essence-text-inner">
@@ -23,11 +23,13 @@
                             <path d="M10 20 Q16 14 22 20" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <p class="essence-desc">
-                        Embedding circular manufacturing practices that lower environmental impact
-                        while strengthening long-term operational resilience.
-                    </p>
-                    <a href="{{ route('esg.sustainability') }}" class="essence-btn">KNOW MORE</a>
+                    <div class="essence-bottom">
+                        <p class="essence-desc">
+                            Embedding circular manufacturing practices that lower environmental impact
+                            while strengthening long-term operational resilience.
+                        </p>
+                        <a href="{{ route('esg.sustainability') }}" class="essence-btn">KNOW MORE</a>
+                    </div>
                 </div>
             </div>
             {{-- Image face (shown when inactive) --}}
@@ -50,11 +52,13 @@
                             <circle cx="16" cy="20" r="2" stroke="white" stroke-width="1.5"/>
                         </svg>
                     </div>
-                    <p class="essence-desc">
-                        Upholding transparent, ethical governance structures that build stakeholder
-                        trust and drive long-term accountability across all business operations.
-                    </p>
-                    <a href="{{ route('about.index') }}" class="essence-btn">KNOW MORE</a>
+                    <div class="essence-bottom">
+                        <p class="essence-desc">
+                            Upholding transparent, ethical governance structures that build stakeholder
+                            trust and drive long-term accountability across all business operations.
+                        </p>
+                        <a href="{{ route('about.index') }}" class="essence-btn">KNOW MORE</a>
+                    </div>
                 </div>
             </div>
             <div class="essence-face essence-face--img">
@@ -79,11 +83,13 @@
                             <path d="M31 26a5 5 0 0 0-5-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <p class="essence-desc">
-                        Creating shared value with local communities through inclusive growth,
-                        skill development and sustainable livelihoods around our operations.
-                    </p>
-                    <a href="{{ route('esg.index') }}" class="essence-btn">KNOW MORE</a>
+                    <div class="essence-bottom">
+                        <p class="essence-desc">
+                            Creating shared value with local communities through inclusive growth,
+                            skill development and sustainable livelihoods around our operations.
+                        </p>
+                        <a href="{{ route('esg.index') }}" class="essence-btn">KNOW MORE</a>
+                    </div>
                 </div>
             </div>
             <div class="essence-face essence-face--img">
@@ -105,11 +111,13 @@
                             <path d="M21 16l3 3-3 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <p class="essence-desc">
-                        Fostering a diverse, empowered workforce where every individual can thrive —
-                        with 55% women employees and leaders driving Runaya's mission forward.
-                    </p>
-                    <a href="{{ route('careers.index') }}" class="essence-btn">KNOW MORE</a>
+                    <div class="essence-bottom">
+                        <p class="essence-desc">
+                            Fostering a diverse, empowered workforce where every individual can thrive —
+                            with 55% women employees and leaders driving Runaya's mission forward.
+                        </p>
+                        <a href="{{ route('careers.index') }}" class="essence-btn">KNOW MORE</a>
+                    </div>
                 </div>
             </div>
             <div class="essence-face essence-face--img">

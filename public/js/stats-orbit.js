@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var trigger = { trigger: section, start: "top 80%" };
 
-    /* 1. Arc fade in (dasharray stays intact — no strokeDasharray touch) */
+    /* 1. Arc fade in */
     gsap.from(".orbit-arc", {
         opacity: 0,
         duration: 1.2,
@@ -19,14 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
     /* 2. Connector lines fade in */
     gsap.from(".orbit-connector", {
         opacity: 0,
-        duration: 0.5,
-        stagger: 0.12,
-        delay: 0.7,
+        duration: 0.6,
+        stagger: 0.15,
+        delay: 0.6,
         ease: "power2.out",
         scrollTrigger: trigger,
     });
 
-    /* 3. Icon groups pop in from scale */
+    /* 3. Icon groups pop in */
     var icons = ["#iconWater", "#iconMetals", "#iconCagr", "#iconWomen"];
     icons.forEach(function (id, i) {
         var el = section.querySelector(id);
@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
         gsap.from(el, {
             opacity: 0,
             scale: 0.4,
-            transformOrigin: "center center",
             transformBox: "fill-box",
+            transformOrigin: "center",
             duration: 0.65,
             ease: "back.out(1.8)",
             delay: 0.5 + i * 0.15,
@@ -43,21 +43,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    /* 4. Labels fade in alongside their icons */
-    var labels = ["#labelWater", "#labelMetals", "#labelCagr", "#labelWomen"];
-    labels.forEach(function (id, i) {
-        var el = section.querySelector(id);
-        if (!el) return;
-        gsap.from(el, {
-            opacity: 0,
-            duration: 0.5,
-            delay: 0.65 + i * 0.15,
-            ease: "power2.out",
-            scrollTrigger: trigger,
-        });
-    });
+    /* 4. Labels fade in */
+    ["#labelWater", "#labelMetals", "#labelCagr", "#labelWomen"].forEach(
+        function (id, i) {
+            var el = section.querySelector(id);
+            if (!el) return;
+            gsap.from(el, {
+                opacity: 0,
+                duration: 0.5,
+                delay: 0.65 + i * 0.15,
+                ease: "power2.out",
+                scrollTrigger: trigger,
+            });
+        },
+    );
 
-    /* 5. Globe float in */
+    /* 5. Globe float in + continuous bob */
     var globe = section.querySelector(".orbit-globe-wrap");
     if (globe) {
         gsap.from(globe, {
@@ -78,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    /* 6. About section fade-ups */
+    /* 6. About fade-ups */
     gsap.utils.toArray(".gsap-fade-up").forEach(function (el, i) {
         gsap.to(el, {
             opacity: 1,
