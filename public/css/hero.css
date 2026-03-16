@@ -14,7 +14,7 @@
     position: absolute;
     inset: 0;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     padding: 0 80px 110px;
     z-index: 1;
 }
@@ -65,7 +65,7 @@
 .slide-content h1 {
     font-size: clamp(2.6rem, 5.5vw, 5.2rem);
     font-weight: 900;
-    color: var(--white);
+    color: #f2f2f2;
     line-height: 1;
     letter-spacing: -1.5px;
     text-transform: uppercase;
@@ -80,28 +80,25 @@
 /* ── Tab bar ─────────────────────────────────────────────── */
 .carousel-tabs {
     position: absolute;
-    bottom: 0;
+    bottom: 76px;
     left: 0;
     right: 0;
-    height: 72px;
+    height: 50px;
+    width: 91%;
+    margin: auto;
     display: flex;
-    align-items: stretch;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.28);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18); /* subtle bottom line for whole bar */
 }
 
 .tab {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     gap: 8px;
     cursor: pointer;
     position: relative;
-    overflow: hidden;
     padding: 0 16px;
     background: transparent;
     border: none;
@@ -112,12 +109,9 @@
 .tab:last-child {
     border-right: none;
 }
-.tab:hover {
-    background: rgba(255, 255, 255, 0.06);
-}
 
 .tab-num {
-    font-size: 0.7rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.4);
     letter-spacing: 0.05em;
@@ -126,7 +120,7 @@
 }
 
 .tab-label {
-    font-size: 0.8rem;
+    font-size: 1.25rem;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.5);
     letter-spacing: 0.04em;
@@ -135,11 +129,13 @@
 }
 
 .tab.is-active .tab-num {
-    color: var(--orange);
+    color: #f2f2f2;
+    font-size: 1.25rem;
 }
 .tab.is-active .tab-label {
-    color: var(--white);
+    color: #f2f2f2;
     font-weight: 700;
+    font-size: 1.25rem;
 }
 
 /* Orange bottom line on active tab */
@@ -192,7 +188,7 @@
 }
 
 .arrow:hover {
-    border-color: var(--white);
+    border-color: #f2f2f2;
     background: rgba(255, 255, 255, 0.15);
 }
 .arrow svg {
@@ -200,10 +196,74 @@
     height: 14px;
 }
 .arrow--left {
-    left: 28px;
+    left: 70px;
 }
 .arrow--right {
-    right: 28px;
+    right: 70px;
+}
+
+/* Remove default border-bottom from .tab itself */
+.tab {
+    border-bottom: none; /* ← important */
+}
+
+/* Subtle bottom border for ALL tabs (inactive look) */
+.tab::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(
+        255,
+        255,
+        255,
+        0.18
+    ); /* light / subtle - adjust opacity/color to taste */
+    z-index: 1;
+}
+
+/* Orange indicator ONLY for active tab */
+.tab::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 2; /* above the subtle line */
+}
+
+.tab.is-active::after {
+    transform: scaleX(1);
+}
+
+/* Optional: make hover more visible */
+.tab:hover::before {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* If you still want the GSAP progress bar, keep it — but make it match ::after */
+.tab-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: var(--orange);
+    width: 0%;
+    z-index: 3; /* on top if needed */
+    pointer-events: none;
+    transform-origin: left;
+}
+
+/* When tab becomes active via click, you can instantly set progress to 0 and let GSAP animate */
+.tab.is-active .tab-progress {
+    width: 0%; /* reset when switching */
 }
 
 /* ── Responsive ──────────────────────────────────────────── */

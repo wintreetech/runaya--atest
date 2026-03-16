@@ -48,36 +48,40 @@
 </svg>
 
 <!-- ORBIT ICONS -->
-<div class="orbit-icon orbit-icon--water">
-    <img src="{{ asset('images/home/icons/water-energy.svg') }}" alt="Water Positive">
+<div class="orbit-icon orbit-icon--cagr">
+  <img src="{{ asset('images/home/icons/cagr.svg') }}" alt="Growing CAGR" class="icon-default">
+  <img src="{{ asset('images/home/icons/cagr-orange.svg') }}" alt="Growing CAGR" class="icon-hover">
 </div>
 
 <div class="orbit-icon orbit-icon--metals">
-    <img src="{{ asset('images/home/icons/critical-metals.svg') }}" alt="Critical Metals">
+  <img src="{{ asset('images/home/icons/critical-metals.svg') }}" alt="Critical Metals" class="icon-default">
+  <img src="{{ asset('images/home/icons/critical-metals-orange.svg') }}" alt="Critical Metals" class="icon-hover">
 </div>
 
-<div class="orbit-icon orbit-icon--cagr">
-    <img src="{{ asset('images/home/icons/cagr.svg') }}" alt="Growing CAGR">
+<div class="orbit-icon orbit-icon--water">
+  <img src="{{ asset('images/home/icons/water-energy.svg') }}" alt="Water Positive" class="icon-default">
+  <img src="{{ asset('images/home/icons/water-energy-orange.svg') }}" alt="Water Positive" class="icon-hover">  <!-- assume naming -->
 </div>
 
 <div class="orbit-icon orbit-icon--women">
-    <img src="{{ asset('images/home/icons/women.svg') }}" alt="Women Employees">
+  <img src="{{ asset('images/home/icons/women.svg') }}" alt="Women Employees" class="icon-default">
+  <img src="{{ asset('images/home/icons/women-orange.svg') }}" alt="Women Employees" class="icon-hover">  <!-- assume naming -->
 </div>
 
         {{-- LABELS --}}
-        <div class="orbit-label orbit-label--tl" id="labelWater">
+        <div style="font-size: 1.2rem; font-weight: 700;" class="orbit-label orbit-label--tl" id="labelWater">
             Water Positive<br>Renewable<br>Energy
         </div>
 
-        <div class="orbit-label orbit-label--tr" id="labelMetals">
+        <div style="font-size: 1.2rem; font-weight: 700;" class="orbit-label orbit-label--tr" id="labelMetals">
             Critical Metals<br>Recovered<br>Responsibly
         </div>
 
-        <div class="orbit-label orbit-label--bl" id="labelCagr">
+        <div style="font-size: 1.2rem; font-weight: 700;" class="orbit-label orbit-label--bl" id="labelCagr">
             Growing CAGR<br>of 40% since<br>inception
         </div>
 
-        <div class="orbit-label orbit-label--br" id="labelWomen">
+        <div style="font-size: 1.2rem; font-weight: 700;" class="orbit-label orbit-label--br" id="labelWomen">
             55% Women<br>Employees<br>and Leaders
         </div>
 
