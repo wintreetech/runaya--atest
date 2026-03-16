@@ -26,7 +26,7 @@
 .sc-heading {
     font-size: clamp(1.4rem, 2.8vw, 1.9rem);
     font-weight: 700;
-    color: #ffffff;
+    color: #f2f2f2;
     line-height: 1.35;
     margin: 0 0 28px;
     letter-spacing: -0.2px;
@@ -44,7 +44,7 @@
 .sc-btn {
     display: inline-block;
     background: #0a2e38;
-    color: #ffffff;
+    color: #f2f2f2;
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.14em;
@@ -56,6 +56,7 @@
     transition:
         background 0.25s,
         transform 0.2s;
+    margin-bottom: -130px;
 }
 
 .sc-btn:hover {

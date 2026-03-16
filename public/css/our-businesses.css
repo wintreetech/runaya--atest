@@ -38,7 +38,7 @@
     /* Active card: 58% wide, side cards peek at ~20% each */
     width: 58%;
     height: 480px;
-    border-radius: 18px;
+    border-radius: 10px;
     overflow: hidden;
     margin: 0 1.5%;
     /* Side cards slightly scaled down */
@@ -105,7 +105,7 @@
 .ob-card__content h3 {
     font-size: clamp(1.3rem, 2.2vw, 1.9rem);
     font-weight: 700;
-    color: #ffffff;
+    color: #f2f2f2;
     margin-bottom: 18px;
     line-height: 1.25;
 }
@@ -122,7 +122,7 @@
 .ob-btn {
     display: inline-block;
     background: #1a5c6b;
-    color: #ffffff;
+    color: #f2f2f2;
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.12em;

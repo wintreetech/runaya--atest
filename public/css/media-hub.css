@@ -18,7 +18,7 @@
 /* ── Card base ───────────────────────────────────────────── */
 .mh-card {
     background: #f0f4f4;
-    border-radius: 16px;
+    border-radius: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@
 /* Keep text white */
 .mh-card:hover .mh-view-all--teal,
 .mh-card:hover .mh-view-all--orange {
-    color: #ffffff;
+    color: #f2f2f2;
 }
 .mh-footer,
 .mh-view-all--orange {
@@ -93,7 +93,7 @@
     justify-content: center;
     gap: 10px;
     background: #0e3d49;
-    color: #ffffff;
+    color: #f2f2f2;
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -212,7 +212,7 @@
 }
 
 .mh-nav-btn:hover {
-    color: #ffffff;
+    color: #f2f2f2;
     background: rgba(255, 255, 255, 0.1);
 }
 
@@ -222,7 +222,7 @@
 }
 
 .mh-view-all--teal {
-    color: #ffffff;
+    color: #f2f2f2;
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.04em;

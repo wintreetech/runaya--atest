@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const TABS = document.querySelectorAll(".tab");
     const PROGS = document.querySelectorAll(".tab-progress");
     const COUNT = SLIDES.length;
-    const DURATION = 5; // seconds per slide
+    const DURATION = 4; // seconds per slide
 
     if (!COUNT) return;
 
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
             gsap.set(p, { width: "0%" });
         });
 
-        // Animate active tab's progress bar, then advance
+        // Animate active tab progress bar, then advance
         if (progTween) progTween.kill();
         progTween = gsap.to(PROGS[idx], {
             width: "100%",

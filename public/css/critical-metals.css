@@ -9,7 +9,7 @@
     position: relative;
     max-width: 1280px;
     margin: 0 auto;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
     background: #0d3d49;
 }
@@ -25,7 +25,7 @@
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 56px;
     font-weight: 800;
-    fill: #ffffff;
+    fill: #fff4ed;
     text-anchor: middle;
     dominant-baseline: auto;
 }
@@ -43,6 +43,32 @@
 .cm-mineral-g:hover {
     transform: scale(1.1);
     filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.5));
+}
+
+.cm-mineral-g {
+    cursor: pointer;
+}
+
+/* scale the mineral image only */
+.cm-mineral-g image {
+    transition: transform 0.35s ease;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.cm-mineral-g:hover image {
+    transform: scale(1.18);
+}
+
+/* shadow effect */
+.cm-mineral-g:hover {
+    filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.55));
+}
+
+/* dim background */
+.cm-card:hover .cm-bg-img {
+    opacity: 0.35;
+    filter: blur(1.5px);
 }
 
 /* Circle stroke brightens on hover */
@@ -86,7 +112,7 @@
 /* Labels brighten when sibling mineral-g is hovered
    We use JS to toggle a class on the text element */
 .cm-label.is-hovered {
-    fill: rgba(255, 255, 255, 1);
+    fill: #fff4ed;
 }
 
 /* ── Body text ────────────────────────────────────────────── */
@@ -94,7 +120,7 @@
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 14px;
     line-height: 1.85;
-    color: rgba(255, 255, 255, 0.78);
+    color: #fff4ed;
     text-align: left;
 }
 
@@ -109,7 +135,7 @@
 .cm-btn {
     display: inline-block;
     background: #0a2e38;
-    color: #ffffff;
+    color: #fff4ed;
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 13px;
     font-weight: 700;

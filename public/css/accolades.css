@@ -9,14 +9,14 @@
 /* Teal border strips top and bottom */
 .accolades-strip {
     height: 10px;
-    background: #4ecdc4;
+    background: #93e4dd;
 }
 
 /* Outer clip container */
 .accolades-track-outer {
     overflow: hidden;
-    background: #4ecdc4; /* teal background = left/right border effect */
-    padding: 10px 0; /* top/bottom = strip thickness */
+    background: #93e4dd;
+    padding: 10px 10px;
 }
 
 /* Track: two sets side by side, animates left */
@@ -24,8 +24,7 @@
     display: flex;
     width: max-content;
     animation: accoladeScroll 28s linear infinite;
-    background: #edf2f2; /* inner area matches section bg */
-    padding: 20px 0;
+    padding: 0px 0;
 }
 
 /* Pause on hover */
@@ -47,9 +46,9 @@
     gap: 20px;
     background: #f4f8f8;
     border: 1px solid rgba(26, 92, 107, 0.1);
-    border-radius: 14px;
+    border-radius: 6.87px;
     padding: 24px 28px;
-    margin: 0 12px;
+    margin: 0 10px;
     width: 340px;
     flex-shrink: 0;
     transition:

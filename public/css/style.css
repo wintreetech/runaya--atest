@@ -1,6 +1,21 @@
+@font-face {
+    font-family: "NHaasGroteskTX";
+    src: url("/fonts/NHaasGroteskTXPro-Rg.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "NHaasGroteskTX";
+    src: url("/fonts/NHaasGroteskTXPro-It.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: "Neue Haas Grotesk", sans-serif;
 }
 
 .navbar {

@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     );
 
-    /* 5. Globe float in + continuous bob */
+    /* 5. Globe — fade in only, NO continuous bob animation */
     var globe = section.querySelector(".orbit-globe-wrap");
     if (globe) {
         gsap.from(globe, {
@@ -69,14 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             delay: 0.2,
             scrollTrigger: trigger,
         });
-        gsap.to(globe, {
-            y: -10,
-            duration: 3,
-            ease: "sine.inOut",
-            yoyo: true,
-            repeat: -1,
-            delay: 1.2,
-        });
+        /* gsap.to bob removed — globe is now static after fade-in */
     }
 
     /* 6. About fade-ups */
