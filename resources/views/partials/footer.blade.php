@@ -93,13 +93,17 @@
     </div>
 
     {{-- Product Enquiry floating button --}}
-    <!-- <a href="{{ route('contact') }}" class="footer__enquiry" aria-label="Product Enquiry">
-        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="8" x2="12" y2="12"/>
-            <line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-        <span>Product<br>Enquiry</span>
-    </a> -->
+   <a href="{{ route('contact') }}" class="footer__enquiry" aria-label="Product Enquiry">
+
+    {{-- Dark circle icon — sits on top of the pill --}}
+    <div class="enquiry__icon">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M31.4367 25.9798C33.0607 23.374 34 20.2969 34 16.9993C34 7.60989 26.3894 0 17 0C7.61055 0 0 7.60989 0 16.9993C0 26.3915 7.61055 34 17 34C20.2977 34 23.3754 33.0604 25.9817 31.4355L33.4329 33.4316L31.4367 25.9798ZM17 7.92811C18.1784 7.92811 19.1345 8.8835 19.1345 10.0626C19.1345 11.2411 18.1791 12.1971 17 12.1971C15.8209 12.1971 14.8655 11.2417 14.8655 10.0626C14.8655 8.8835 15.8216 7.92811 17 7.92811ZM20.7352 26.0726H13.2648V22.8704H14.8655V16.4669H13.2648V13.2654H19.1346V16.4669V22.8704H20.7353V26.0726H20.7352Z" fill="#021C25"/>
+</svg>
+
+    </div>
+
+    <span>Product<br>Enquiry</span>
+</a>
 
 </footer>

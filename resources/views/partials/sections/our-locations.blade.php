@@ -5,35 +5,32 @@
 
         {{-- LEFT --}}
         <div class="loc-left">
-            <h2 class="loc-heading">Our Locations</h2>
+    <h2 class="loc-heading">Our Locations</h2>
 
-            <div class="loc-list-card-row">
-                <ul class="loc-list" id="locList">
-                    <li class="loc-item is-active" data-loc="mumbai">Mumbai</li>
-                    <li class="loc-item" data-loc="jharsuguda">Jharsuguda</li>
-                    <li class="loc-item" data-loc="korba">Korba</li>
-                    <li class="loc-item" data-loc="chanderiya">Chanderiya</li>
-                    <li class="loc-item" data-loc="bhilwara">Bhilwara</li>
-                </ul>
+    <div class="loc-list-card-row">
+        <ul class="loc-list" id="locList">
+            <li class="loc-item is-active" data-loc="mumbai">Mumbai</li>
+            <li class="loc-item" data-loc="jharsuguda">Jharsuguda</li>
+            <li class="loc-item" data-loc="korba">Korba</li>
+            <li class="loc-item" data-loc="chanderiya">Chanderiya</li>
+            <li class="loc-item" data-loc="bhilwara">Bhilwara</li>
+            <li class="loc-item" data-loc="dariba">Dariba</li>
+        </ul>
 
-                <div class="loc-card" id="locCard">
-                    <h3 class="loc-card__title" id="locCardTitle">Aluminium Recovery Business</h3>
-                    <p class="loc-card__addr" id="locCardAddr">
-                        Unit No. 401, Interface 16,<br>
-                        Malad Link Road, Malad West,<br>
-                        Mumbai – 400064<br>
-                        GSTIN: 27AAKCR3131L1ZO
-                    </p>
-                </div>
-            </div>
-
-            <div class="loc-gmap-wrap">
-                <iframe id="locGmap" class="loc-gmap" loading="lazy" allowfullscreen
-                    referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.0!2d72.848!3d19.186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b633e5810e93%3A0x7501d3e4e0c7a691!2sMalad+West%2C+Mumbai!5e0!3m2!1sen!2sin!4v1">
-                </iframe>
-            </div>
+        <div class="loc-card" id="locCard">
+            <h3 class="loc-card__title" id="locCardTitle">Aluminium Recovery Business</h3>
+            <p class="loc-card__addr" id="locCardAddr">Maharashtra</p>
         </div>
+    </div>
+
+    {{-- Map sits BELOW list+card --}}
+    <div class="loc-gmap-wrap">
+        <iframe id="locGmap" class="loc-gmap" loading="lazy" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.0!2d72.848!3d19.186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b633e5810e93%3A0x7501d3e4e0c7a691!2sMalad+West%2C+Mumbai!5e0!3m2!1sen!2sin!4v1">
+        </iframe>
+    </div>
+</div>
 
         {{-- RIGHT: Real SimpleMaps India SVG + pins overlay --}}
         <div class="loc-right">
@@ -93,6 +90,12 @@
                         <circle r="14" class="pin-outer"/>
                         <circle r="7"  class="pin-inner"/>
                     </g>
+
+                    <g class="map-pin" data-loc="dariba" transform="translate(271,358)">
+    <line x1="0" y1="0" x2="0" y2="24" class="pin-stem"/>
+    <circle r="14" class="pin-outer"/>
+    <circle r="7"  class="pin-inner"/>
+</g>
 
                 </svg>
             </div>

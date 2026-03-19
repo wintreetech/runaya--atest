@@ -69,19 +69,19 @@
 </div>
 
         {{-- LABELS --}}
-        <div style="font-size: 1.2rem; font-weight: 700;" class="orbit-label orbit-label--tl" id="labelWater">
+        <div style="font-size: 32px; line-height:38px; font-weight: 700;" class="orbit-label orbit-label--tl" id="labelWater">
             Water Positive<br>Renewable<br>Energy
         </div>
 
-        <div style="font-size: 1.2rem; font-weight: 700;" class="orbit-label orbit-label--tr" id="labelMetals">
+        <div style="font-size: 32px; line-height:38px; font-weight: 700;" class="orbit-label orbit-label--tr" id="labelMetals">
             Critical Metals<br>Recovered<br>Responsibly
         </div>
 
-        <div style="font-size: 1.2rem; font-weight: 700;" class="orbit-label orbit-label--bl" id="labelCagr">
+        <div style="font-size: 32px; line-height:38px; font-weight: 700;" class="orbit-label orbit-label--bl" id="labelCagr">
             Growing CAGR<br>of 40% since<br>inception
         </div>
 
-        <div style="font-size: 1.2rem; font-weight: 700;" class="orbit-label orbit-label--br" id="labelWomen">
+        <div style="font-size: 32px; line-height:38px; font-weight: 700;" class="orbit-label orbit-label--br" id="labelWomen">
             55% Women<br>Employees<br>and Leaders
         </div>
 

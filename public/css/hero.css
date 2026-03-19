@@ -62,7 +62,7 @@
     max-width: 750px;
 }
 
-.slide-content h1 {
+/* .slide-content h1 {
     font-size: clamp(2.6rem, 5.5vw, 5.2rem);
     font-weight: 900;
     color: #f2f2f2;
@@ -70,6 +70,48 @@
     letter-spacing: -1.5px;
     text-transform: uppercase;
     text-shadow: 0 2px 30px rgba(0, 0, 0, 0.45);
+} */
+
+.slide-content h1.corporate {
+    font-size: 80px;
+    font-weight: 700;
+    color: #f2f2f2;
+    line-height: 80px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.45);
+}
+
+.slide-content h1.sustainability {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+}
+
+.slide-content h1.esg {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 80px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+}
+
+.slide-content h1.safety {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 80px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+}
+
+.slide-content h1.diversity {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 80px;
+    text-transform: uppercase;
+    vertical-align: bottom;
 }
 
 .slide-content h1 strong {

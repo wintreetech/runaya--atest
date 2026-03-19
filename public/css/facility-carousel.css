@@ -17,13 +17,15 @@
 /* ── Track — flex row, JS slides it ────────────────────── */
 .fc-track {
     display: flex;
-    transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     will-change: transform;
+    position: relative;
+    overflow: hidden;
+    height: 566px; /* match fc-slide height */
 }
 
 /* ── Individual slide ────────────────────────────────────── */
 .fc-slide {
-    position: relative;
+    position: absolute; /* JS already sets this via gsap.set */
     flex-shrink: 0;
     width: 100%;
     height: 800px;
@@ -75,10 +77,10 @@
 }
 
 .fc-title {
-    font-size: clamp(2.3rem, 4.5vw, 3.8rem);
-    font-weight: 700;
+    font-size: 60px;
+    font-weight: 500;
     color: #f2f2f2;
-    line-height: 1.2;
+    line-height: 60px;
     margin: 0;
     max-width: 55%;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
@@ -90,10 +92,11 @@
     align-items: center;
     gap: 6px;
     color: rgba(255, 255, 255, 0.88);
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 400;
     white-space: nowrap;
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
 }
 
 .fc-location svg {
@@ -171,6 +174,9 @@
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 768px) {
+    .fc-track {
+        height: 380px;
+    }
     .fc-slide {
         height: 380px;
     }
@@ -193,6 +199,9 @@
 }
 
 @media (max-width: 480px) {
+    .fc-track {
+        height: 300px;
+    }
     .fc-slide {
         height: 300px;
     }

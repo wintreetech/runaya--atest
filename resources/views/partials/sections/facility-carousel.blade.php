@@ -11,20 +11,21 @@
                 </div>
                 <div class="fc-overlay"></div>
                 <div class="fc-content">
-                    <h3 class="fc-title">Aluminium Recovery<br>Business</h3>
+                    <!-- <h3 class="fc-title">Aluminium Recovery<br>Business</h3> -->
+                    <h3 class="fc-title">Ground Support<br>Solutions</h3>
                     <span class="fc-location">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                             <circle cx="12" cy="10" r="3"/>
                         </svg>
-                        Korba, Chhattisgarh
+                        Chanderiya
                     </span>
                 </div>
             </div>
 
             <div class="fc-slide">
                 <div class="fc-img">
-                    <img src="{{ asset('images/home/facilities/facility-1.png') }}" alt="Critical Metal Recovery"
+                    <img src="{{ asset('images/home/facilities/facility-2.png') }}" alt="Critical Metal Recovery"
                          onerror="this.parentElement.style.background='#0e3d49'">
                 </div>
                 <div class="fc-overlay"></div>
@@ -35,47 +36,28 @@
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                             <circle cx="12" cy="10" r="3"/>
                         </svg>
-                        Chittorgarh, Rajasthan
+                        Rajasthan
                     </span>
                 </div>
             </div>
 
             <div class="fc-slide">
                 <div class="fc-img">
-                    <img src="{{ asset('images/home/facilities/facility-1.png') }}" alt="Ground Support & Mining"
+                    <img src="{{ asset('images/home/facilities/facility-3.png') }}" alt="Ground Support & Mining"
                          onerror="this.parentElement.style.background='#507989'">
                 </div>
                 <div class="fc-overlay"></div>
                 <div class="fc-content">
-                    <h3 class="fc-title">Ground Support and<br>Mining Solutions</h3>
+                    <h3 class="fc-title">Aluminium Recovery<br>Business</h3>
                     <span class="fc-location">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                             <circle cx="12" cy="10" r="3"/>
                         </svg>
-                        Bhilwara, Rajasthan
+                        Jharsuguda
                     </span>
                 </div>
             </div>
-
-            <div class="fc-slide">
-                <div class="fc-img">
-                    <img src="{{ asset('images/home/facilities/facility-1.png') }}" alt="Datacentre Manufacturing"
-                         onerror="this.parentElement.style.background='#1a5c6b'">
-                </div>
-                <div class="fc-overlay"></div>
-                <div class="fc-content">
-                    <h3 class="fc-title">Datacentre &amp;<br>FRP Manufacturing</h3>
-                    <span class="fc-location">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        Jharsuguda, Odisha
-                    </span>
-                </div>
-            </div>
-
         </div>
 
         <button class="fc-arrow fc-arrow--left" id="fcPrev" aria-label="Previous facility">
@@ -93,7 +75,6 @@
             <span class="fc-dot is-active" data-index="0"></span>
             <span class="fc-dot" data-index="1"></span>
             <span class="fc-dot" data-index="2"></span>
-            <span class="fc-dot" data-index="3"></span>
         </div>
 
     </div>

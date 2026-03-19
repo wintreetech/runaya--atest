@@ -1,5 +1,35 @@
 /* === stats-orbit.js === */
 document.addEventListener("DOMContentLoaded", function () {
+    var iconLabelMap = [
+        {
+            icon: document.querySelector(".orbit-icon--water"),
+            label: document.getElementById("labelWater"),
+        },
+        {
+            icon: document.querySelector(".orbit-icon--metals"),
+            label: document.getElementById("labelMetals"),
+        },
+        {
+            icon: document.querySelector(".orbit-icon--cagr"),
+            label: document.getElementById("labelCagr"),
+        },
+        {
+            icon: document.querySelector(".orbit-icon--women"),
+            label: document.getElementById("labelWomen"),
+        },
+    ];
+
+    iconLabelMap.forEach(function (pair) {
+        if (!pair.icon || !pair.label) return;
+
+        pair.icon.addEventListener("mouseenter", function () {
+            pair.label.classList.add("is-hovered");
+        });
+
+        pair.icon.addEventListener("mouseleave", function () {
+            pair.label.classList.remove("is-hovered");
+        });
+    });
     if (typeof gsap === "undefined") return;
     gsap.registerPlugin(ScrollTrigger);
 

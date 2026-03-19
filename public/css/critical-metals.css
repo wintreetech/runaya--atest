@@ -22,9 +22,9 @@
 
 /* Title */
 .cm-svg-title {
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 56px;
-    font-weight: 800;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
     fill: #fff4ed;
     text-anchor: middle;
     dominant-baseline: auto;
@@ -94,7 +94,6 @@
 
 /* ── Labels — low opacity default, full on hover ─────────── */
 .cm-label {
-    font-family: "Segoe UI", Arial, sans-serif;
     font-weight: 500;
     fill: rgba(255, 255, 255, 0.38);
     text-anchor: middle;
@@ -117,9 +116,9 @@
 
 /* ── Body text ────────────────────────────────────────────── */
 .cm-body-fo {
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.85;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
     color: #fff4ed;
     text-align: left;
 }
@@ -134,9 +133,8 @@
 
 .cm-btn {
     display: inline-block;
-    background: #0a2e38;
+    background: #074158;
     color: #fff4ed;
-    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.12em;

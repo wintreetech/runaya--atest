@@ -3,15 +3,18 @@
 .essence-section {
     background: #edf2f2;
     padding: 60px 0 0;
+    padding-top: 36px;
 }
 
 .essence-heading {
-    font-size: clamp(1.4rem, 2.8vw, 2rem);
+    font-size: 36px;
     font-weight: 700;
-    color: #0e3d49;
+    color: #074158;
     text-align: center;
     padding: 0 24px 40px;
     margin: 0;
+    line-height: 36px;
+    padding-bottom: 30px;
 }
 
 /* ── Grid: 4 equal columns, NO flex change on hover ─────── */
@@ -19,7 +22,20 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
-    height: 480px;
+    height: 420px;
+    background-image: url("/images/home/essence/all-panels.png");
+    background-size: cover;
+    background-position: center;
+    background-color: #0d2d3d;
+}
+
+/* Hide individual panel images since bg handles it */
+.essence-face--img img {
+    display: none;
+}
+
+.essence-face--img {
+    background: transparent; /* let grid bg show through */
 }
 
 /* ── Panel ───────────────────────────────────────────────── */
@@ -35,15 +51,17 @@
     inset: 0;
     z-index: 1;
     transition: opacity 0.35s ease;
+    background: #0d2d3d; /* fallback */
 }
 
 .essence-face--img img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    height: 117%;
+    object-fit: contain; /* show full illustration, no crop */
+    object-position: center top; /* anchor to top so figures aren't cut */
     background: #0d2d3d;
     display: block;
+    margin-top: -4px;
 }
 
 .essence-img-overlay {
@@ -58,7 +76,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: #00b4a0;
+    background: #26c8b8;
     color: #f2f2f2;
     font-size: 1rem;
     font-weight: 500;
@@ -169,7 +187,7 @@
 }
 
 .essence-btn:hover {
-    background: rgba(255, 255, 255, 0.85);
+    background: #507989;
     border-color: #f2f2f2;
 }
 

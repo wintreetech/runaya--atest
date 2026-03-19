@@ -27,27 +27,37 @@
             <source src="{{ asset('videos/corporate-banner.mp4') }}" type="video/mp4">
         </video>
     </div>
-    <div class="slide-content"><h1>Build<br><strong>Future Positive</strong></h1></div>
+    <div class="slide-content">
+    <h1 class="corporate"><span style="font-weight: 500;">Build</span><br>Future Positive</h1>
+</div>
 </div>
 
     <div class="slide" id="slide-1">
         <div class="slide-bg" style="background-image: url('{{ asset('images/hero/sustainability.png') }}')"></div>
-        <div class="slide-content"><h1>Responsible<br><strong>Sustainability</strong></h1></div>
+        <div class="slide-content">
+    <h1 class="sustainability">Ranked in the Top 7%<br>Globally in the S&P<br>Global Corporate<br>Sustainability<br>Assessment.</h1>
+</div>
     </div>
 
     <div class="slide" id="slide-2">
         <div class="slide-bg" style="background-image: url('{{ asset('images/hero/esg.png') }}')"></div>
-        <div class="slide-content"><h1>Committed to<br><strong>ESG Values</strong></h1></div>
+        <div class="slide-content">
+    <h1 class="esg">Purpose,<br>Responsibility<br>and Impact.</h1>
+</div>
     </div>
 
     <div class="slide" id="slide-3">
         <div class="slide-bg" style="background-image: url('{{ asset('images/hero/safety.png') }}')"></div>
-        <div class="slide-content"><h1>Built on Trust,<br><strong>Driven by Safety</strong></h1></div>
+        <div class="slide-content">
+    <h1 class="safety">Built on trust,<br>driven by<br>safety.</h1>
+</div>
     </div>
 
     <div class="slide" id="slide-4">
-        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/diversity.png') }}')"></div>
-        <div class="slide-content"><h1>Different Minds,<br><strong>One Direction</strong></h1></div>
+        <div class="slide-bg" style="background-image: url('{{ asset('images/hero/diversity.jpg') }}')"></div>
+        <div class="slide-content">
+    <h1 class="diversity">Different Minds<br>One Direction</h1>
+</div>
     </div>
 
     <div class="carousel-tabs" id="carouselTabs">

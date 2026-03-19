@@ -1,4 +1,3 @@
-/* === carousel.js — GSAP hero carousel === */
 document.addEventListener("DOMContentLoaded", function () {
     if (typeof gsap === "undefined") return;
 
@@ -6,38 +5,66 @@ document.addEventListener("DOMContentLoaded", function () {
     const TABS = document.querySelectorAll(".tab");
     const PROGS = document.querySelectorAll(".tab-progress");
     const COUNT = SLIDES.length;
-    const DURATION = 4; // seconds per slide
+
+    const DEFAULT_DURATION = 4;
 
     if (!COUNT) return;
 
     let current = 0;
     let progTween = null;
 
-    // ── Set initial state ─────────────────────────────────
-    SLIDES.forEach(function (slide, i) {
+    // ── Initial setup ───────────────────────────────
+    SLIDES.forEach((slide, i) => {
         gsap.set(slide, { zIndex: i === 0 ? 2 : 1 });
-        gsap.set(slide.querySelector(".slide-bg"), {
+
+        const bg = slide.querySelector(".slide-bg");
+        const cont = slide.querySelector(".slide-content");
+
+        gsap.set(bg, {
             scale: 1.08,
             opacity: i === 0 ? 1 : 0,
         });
-        gsap.set(slide.querySelector(".slide-content"), { opacity: 0, y: 30 });
+
+        gsap.set(cont, { opacity: 0, y: 30 });
     });
 
-    enterSlide(0);
+    // ── START: Wait for first video ─────────────────
+    const firstVideo = document.querySelector("#slide-0 video");
 
-    // ── Animate slide in ──────────────────────────────────
+    if (firstVideo) {
+        firstVideo.pause();
+
+        const startCarousel = () => {
+            firstVideo.play().catch(() => {});
+            enterSlide(0);
+        };
+
+        if (firstVideo.readyState >= 3) {
+            startCarousel();
+        } else {
+            firstVideo.addEventListener("canplaythrough", startCarousel, {
+                once: true,
+            });
+        }
+    } else {
+        enterSlide(0);
+    }
+
+    // ── Enter Slide ────────────────────────────────
     function enterSlide(idx) {
-        var slide = SLIDES[idx];
-        var bg = slide.querySelector(".slide-bg");
-        var cont = slide.querySelector(".slide-content");
+        const slide = SLIDES[idx];
+        const bg = slide.querySelector(".slide-bg");
+        const cont = slide.querySelector(".slide-content");
 
         gsap.set(slide, { zIndex: 3 });
+
         gsap.to(bg, {
             opacity: 1,
             scale: 1,
             duration: 1.4,
             ease: "power2.out",
         });
+
         gsap.to(cont, {
             opacity: 1,
             y: 0,
@@ -46,89 +73,120 @@ document.addEventListener("DOMContentLoaded", function () {
             delay: 0.35,
         });
 
-        // Update tabs
-        TABS.forEach(function (tab, i) {
-            var active = i === idx;
+        // Tabs update
+        TABS.forEach((tab, i) => {
+            const active = i === idx;
             tab.classList.toggle("is-active", active);
             tab.setAttribute("aria-selected", active ? "true" : "false");
         });
 
-        // Reset all progress bars
-        PROGS.forEach(function (p) {
-            gsap.set(p, { width: "0%" });
-        });
+        // Reset progress bars
+        PROGS.forEach((p) => gsap.set(p, { width: "0%" }));
 
-        // Animate active tab progress bar, then advance
+        handleProgress(idx);
+    }
+
+    // ── Handle Progress (video aware) ──────────────
+    function handleProgress(idx) {
+        const slide = SLIDES[idx];
+        const video = slide.querySelector("video");
+
+        // If slide has video → sync with it
+        if (video) {
+            const start = () =>
+                startProgress(idx, video.duration || DEFAULT_DURATION);
+
+            if (video.readyState >= 3) {
+                start();
+            } else {
+                video.addEventListener("canplaythrough", start, { once: true });
+            }
+        } else {
+            startProgress(idx, DEFAULT_DURATION);
+        }
+    }
+
+    // ── Start Progress ─────────────────────────────
+    function startProgress(idx, duration) {
         if (progTween) progTween.kill();
+
         progTween = gsap.to(PROGS[idx], {
             width: "100%",
-            duration: DURATION,
+            duration: duration,
             ease: "none",
-            onComplete: function () {
+            onComplete: () => {
                 goTo((idx + 1) % COUNT);
             },
         });
     }
 
-    // ── Animate slide out ─────────────────────────────────
+    // ── Exit Slide ────────────────────────────────
     function exitSlide(idx) {
-        var slide = SLIDES[idx];
-        var bg = slide.querySelector(".slide-bg");
-        var cont = slide.querySelector(".slide-content");
+        const slide = SLIDES[idx];
+        const bg = slide.querySelector(".slide-bg");
+        const cont = slide.querySelector(".slide-content");
 
-        gsap.to(cont, { opacity: 0, y: -20, duration: 0.5, ease: "power2.in" });
+        gsap.to(cont, {
+            opacity: 0,
+            y: -20,
+            duration: 0.5,
+            ease: "power2.in",
+        });
+
         gsap.to(bg, {
             opacity: 0,
             scale: 1.04,
             duration: 0.8,
             ease: "power2.in",
-            onComplete: function () {
+            onComplete: () => {
                 gsap.set(slide, { zIndex: 1 });
             },
         });
     }
 
-    // ── Go to slide ───────────────────────────────────────
+    // ── Go To Slide ───────────────────────────────
     function goTo(idx) {
         if (idx === current) return;
+
         exitSlide(current);
         current = idx;
         enterSlide(current);
     }
 
-    // ── Tab clicks ────────────────────────────────────────
-    TABS.forEach(function (tab) {
-        tab.addEventListener("click", function () {
+    // ── Tab Clicks ────────────────────────────────
+    TABS.forEach((tab) => {
+        tab.addEventListener("click", () => {
             goTo(Number(tab.dataset.index));
         });
     });
 
-    // ── Arrow clicks ──────────────────────────────────────
-    var arrowLeft = document.getElementById("arrowLeft");
-    var arrowRight = document.getElementById("arrowRight");
+    // ── Arrows ────────────────────────────────────
+    const arrowLeft = document.getElementById("arrowLeft");
+    const arrowRight = document.getElementById("arrowRight");
 
-    if (arrowLeft)
-        arrowLeft.addEventListener("click", function () {
-            goTo((current - 1 + COUNT) % COUNT);
-        });
-    if (arrowRight)
-        arrowRight.addEventListener("click", function () {
-            goTo((current + 1) % COUNT);
-        });
+    arrowLeft?.addEventListener("click", () => {
+        goTo((current - 1 + COUNT) % COUNT);
+    });
 
-    // ── Keyboard arrows ───────────────────────────────────
-    document.addEventListener("keydown", function (e) {
+    arrowRight?.addEventListener("click", () => {
+        goTo((current + 1) % COUNT);
+    });
+
+    // ── Keyboard ──────────────────────────────────
+    document.addEventListener("keydown", (e) => {
         if (e.key === "ArrowLeft") goTo((current - 1 + COUNT) % COUNT);
         if (e.key === "ArrowRight") goTo((current + 1) % COUNT);
     });
 
-    // ── Pause on hover ────────────────────────────────────
-    var hero = document.getElementById("hero");
+    // ── Pause on Hover ────────────────────────────
+    const hero = document.getElementById("hero");
+
     if (hero) {
-        hero.addEventListener("mouseenter", function () {
+        hero.addEventListener("mouseenter", () => {
             if (progTween) progTween.pause();
         });
-        hero.addEventListener("mouseleave", function () {
+
+        hero.addEventListener("mouseleave", () => {
             if (progTween) progTween.resume();
         });
     }
