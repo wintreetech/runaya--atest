@@ -214,7 +214,6 @@ ol {
     padding-bottom: 14px;
     gap: 0;
     text-decoration: none;
-    box-shadow: 0 6px 24px rgba(232, 82, 26, 0.45);
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;

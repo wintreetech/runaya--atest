@@ -18,7 +18,7 @@
         </ul>
 
         <div class="loc-card" id="locCard">
-            <h3 class="loc-card__title" id="locCardTitle">Aluminium Recovery Business</h3>
+            <h3 class="loc-card__title" id="locCardTitle">Registered Office</h3>
             <p class="loc-card__addr" id="locCardAddr">Maharashtra</p>
         </div>
     </div>
