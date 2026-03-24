@@ -23,7 +23,7 @@
 .accolades-track {
     display: flex;
     width: max-content;
-    animation: accoladeScroll 55s linear infinite;
+    animation: accoladeScroll 54s linear infinite;
     padding: 0px 0;
 }
 
