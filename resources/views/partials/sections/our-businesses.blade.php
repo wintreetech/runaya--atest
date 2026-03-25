@@ -22,8 +22,7 @@
                 <div class="ob-card__overlay"></div>
                 <div class="ob-card__content">
                     <h3>Aluminium Recovery Business</h3>
-                    <p>Runaya's aluminium recovery business delivers significantly lower emissions through zero waste,
-                    zero discharge processing that turns aluminium dross into high value metal instead of landfill.</p>
+                    <p>Runaya's aluminium recovery business delivers significantly lower emissions through zero waste, zero discharge processing that turns aluminium dross into high value metal</p>
                     <a href="{{ route('businesses.aluminium') }}" class="ob-btn">KNOW MORE</a>
                 </div>
                 <button class="ob-arrow ob-arrow--left" aria-label="Previous">

@@ -70,7 +70,7 @@
 
         {{-- LABELS --}}
         <div style="font-size: 32px; line-height:38px; font-weight: 700;" class="orbit-label orbit-label--tl" id="labelWater">
-            Water Positive<br>Renewable<br>Energy
+            Water Positive <br>and Renewable<br>Energy
         </div>
 
         <div style="font-size: 32px; line-height:38px; font-weight: 700;" class="orbit-label orbit-label--tr" id="labelMetals">
@@ -117,9 +117,7 @@
             responsibly, and fostering inclusivity
         </h2>
         <p class="about-body gsap-fade-up">
-            Runaya is a leading manufacturing venture, committed to driving innovation and sustainability across
-            the natural resources sector. We partner with industry stakeholders to deliver high-value manufacturing
-            solutions across mining, metals, and telecom sectors, powered by a diverse and empowering work culture.
+          Runaya is a leading manufacturing venture, committed to driving innovation and sustainability across the natural resources sector. We partner with industry stakeholders to deliver high value manufacturing solutions across metal recovery, powered by a diverse and empowering work culture.
         </p>
     </div>
 </section>

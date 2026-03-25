@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var track = document.getElementById("obTrack");
     var origCards = Array.from(track.querySelectorAll(".ob-card"));
     var total = origCards.length;
-    var DURATION = 3000;
+    var DURATION = 5000;
     var autoTimer = null;
     var isAnimating = false;
 
@@ -121,13 +121,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /* ── Click side card ─────────────────────────────────── */
+    /* ── Pause on hover (current active card only) ───────── */
     allCards.forEach(function (card, i) {
-        card.addEventListener("click", function () {
-            if (i !== current) {
-                stopAuto();
-                goTo(i);
-                startAuto();
-            }
+        card.addEventListener("mouseenter", function () {
+            if (i === current) stopAuto();
+        });
+        card.addEventListener("mouseleave", function () {
+            if (i === current) startAuto();
         });
     });
 

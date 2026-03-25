@@ -49,7 +49,7 @@
             <h4 class="footer__col-title">Our Businesses</h4>
             <ul>
                 <li><a href="{{ route('businesses.aluminium') }}">Aluminium Recovery</a></li>
-                <li><a href="{{ route('businesses.critical-metal') }}">Diversified Metal Recovery</a></li>
+                <li><a href="{{ route('businesses.critical-metal') }}">Critical Metal Recovery</a></li>
                 <li><a href="{{ route('businesses.datacentre') }}">Gas-Atomized Aluminium Powder</a></li>
                 <li><a href="{{ route('businesses.mining') }}">Ground Support Solutions</a></li>
             </ul>

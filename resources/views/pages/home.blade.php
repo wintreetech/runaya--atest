@@ -35,7 +35,7 @@
     <div class="slide" id="slide-1">
         <div class="slide-bg" style="background-image: url('{{ asset('images/hero/sustainability.png') }}')"></div>
         <div class="slide-content">
-    <h1 class="sustainability">Ranked in the Top 7%<br>Globally in the S&P<br>Global Corporate<br>Sustainability<br>Assessment.</h1>
+    <h1 class="sustainability">Ranked in the Top 7%<br>Globally in the S&P<br>Global Corporate<br>Sustainability<br>Assessment Fundamental.</h1>
 </div>
     </div>
 

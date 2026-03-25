@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d74.6313!3d25.3500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f84ae3b39ffa5%3A0x3ae4b45ad9b99c53!2sBhilwara%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1",
         },
         dariba: {
-            title: "Critical Metal Recovery Busines",
+            title: "Critical Metal Recovery Business",
             addr: "Rajasthan",
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d74.5200!3d25.0800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f9e0000000001%3A0x40ef0b15e42fe80!2sDariba%2C+Rajsamand%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1",
         },
