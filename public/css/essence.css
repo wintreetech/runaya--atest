@@ -121,7 +121,7 @@
     transition: opacity 0.3s ease 0.1s;
 }
 
-/* ── Text content ────────────────────────────────────────── */
+/* ── Text content ─────────── */
 .essence-text-inner {
     display: flex;
     flex-direction: column;
