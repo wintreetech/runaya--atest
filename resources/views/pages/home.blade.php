@@ -35,21 +35,21 @@
     <div class="slide" id="slide-1">
         <div class="slide-bg" style="background-image: url('{{ asset('images/hero/sustainability.png') }}')"></div>
         <div class="slide-content">
-    <h1 class="sustainability">Ranked in the Top 7%<br>Globally in the S&P<br>Global Corporate<br>Sustainability<br>Assessment Fundamental.</h1>
+    <h1 class="sustainability">Among the Top 7% <br> Worldwide in S&P <br>Global CSA <br> Fundamental</h1>
 </div>
     </div>
 
     <div class="slide" id="slide-2">
         <div class="slide-bg" style="background-image: url('{{ asset('images/hero/esg.png') }}')"></div>
         <div class="slide-content">
-    <h1 class="esg">Purpose,<br>Responsibility<br>and Impact.</h1>
+    <h1 class="esg">Purpose,<br>Responsibility<br>and Impact</h1>
 </div>
     </div>
 
     <div class="slide" id="slide-3">
         <div class="slide-bg" style="background-image: url('{{ asset('images/hero/safety.png') }}')"></div>
         <div class="slide-content">
-    <h1 class="safety">Built on trust,<br>driven by<br>safety.</h1>
+    <h1 class="safety">Built on trust,<br>driven by<br>safety</h1>
 </div>
     </div>
 

@@ -22,7 +22,7 @@
                 <div class="ob-card__overlay"></div>
                 <div class="ob-card__content">
                     <h3>Aluminium Recovery Business</h3>
-                    <p>Runaya's aluminium recovery business delivers significantly lower emissions through zero waste, zero discharge processing that turns aluminium dross into high value metal.</p>
+                    <p>Runaya's aluminium recovery business delivers significantly lower emissions through zero waste, zero discharge processing that turns aluminium dross into high value metal instead of landfill.</p>
                     <a href="{{ route('businesses.aluminium') }}" class="ob-btn">KNOW MORE</a>
                 </div>
                 <button class="ob-arrow ob-arrow--left" aria-label="Previous">
@@ -44,7 +44,7 @@
                 </div>
                 <div class="ob-card__overlay"></div>
                 <div class="ob-card__content">
-                    <h3>Critical Metal Recovery</h3>
+                    <h3>Critical Metal Recovery Business</h3>
                     <p>Runaya’s critical metal recovery business delivers value from complex industrial residues through advanced recovery technologies that convert underutilised materials into essential resources for modern industries.
                     </p>
                     <a href="{{ route('businesses.critical-metal') }}" class="ob-btn">KNOW MORE</a>
@@ -68,8 +68,8 @@
                 </div>
                 <div class="ob-card__overlay"></div>
                 <div class="ob-card__content">
-                    <h3>Gas Atomized Aluminium Powder</h3>
-                    <p>Runaya’s gas atomized aluminium powder business delivers high purity aluminium powders through advanced atomization technology that supports applications across additive manufacturing, automotive, coatings, and specialised industrial uses.</p>
+                    <h3>Gas Atomized Aluminium Powder Business</h3>
+                    <p>Runaya’s Gas Atomized Aluminium Powder business delivers high purity aluminium powders through advanced atomization technology that supports applications across additive manufacturing, automotive, coatings, and specialised industrial uses.</p>
                     <a href="{{ route('businesses.aluminium') }}" class="ob-btn">KNOW MORE</a>
                 </div>
                 <button class="ob-arrow ob-arrow--left" aria-label="Previous">
@@ -91,7 +91,7 @@
                 </div>
                 <div class="ob-card__overlay"></div>
                 <div class="ob-card__content">
-                    <h3>Ground Support Solutions</h3>
+                    <h3>Ground Support Solutions Business</h3>
                     <p>Runaya’s ground support solutions business delivers advanced reinforcement systems for underground mining through engineered ground support technologies that enhance structural stability and improve operational safety.</p>
                     <a href="{{ route('businesses.datacentre') }}" class="ob-btn">KNOW MORE</a>
                 </div>

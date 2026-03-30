@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var mineralIds = [
         "#cmCadmium",
         "#cmCobalt",
-        "#cmNickel",
+        "#cmZinc",
         "#cmCopper",
         "#cmAntimony",
     ];
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var pairs = [
         { group: "#cmCadmium", label: null },
         { group: "#cmCobalt", label: null },
-        // { group: "#cmNickel", label: null },
+        { group: "#cmZinc", label: null },
         { group: "#cmCopper", label: null },
         { group: "#cmAntimony", label: null },
     ];

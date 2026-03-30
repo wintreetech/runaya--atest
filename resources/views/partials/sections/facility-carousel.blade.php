@@ -30,7 +30,7 @@
                 </div>
                 <div class="fc-overlay"></div>
                 <div class="fc-content">
-                    <h3 class="fc-title">Critical Metal<br>Recovery Business</h3>
+                    <h3 class="fc-title">Critical Metal<br>Recovery</h3>
                     <span class="fc-location">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="fc-overlay"></div>
                 <div class="fc-content">
-                    <h3 class="fc-title">Aluminium Recovery<br>Business</h3>
+                    <h3 class="fc-title">Aluminium <br> Recovery</h3>
                     <span class="fc-location">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>

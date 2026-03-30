@@ -78,8 +78,8 @@
     right: 0;
     background: #26c8b8;
     color: #f2f2f2;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 700;
     text-align: center;
     padding: 18px 12px;
     letter-spacing: 0.02em;
@@ -134,8 +134,8 @@
 }
 
 .essence-label-text {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 800;
     color: #f2f2f2;
     margin: 0;
     padding-top: 32px;

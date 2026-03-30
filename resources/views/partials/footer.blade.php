@@ -17,7 +17,24 @@
                 <li><a href="{{ route('about.leadership') }}">Leadership Team</a></li>
             </ul>
 
-            <h4 class="footer__col-title footer__col-title--spaced">ESG</h4>
+            <h4 class="footer__col-title footer__col-title--spaced">Careers</h4>
+            <ul>
+                <li><a href="{{ route('careers.index') }}">Careers@Runaya</a></li>
+                <li><a href="{{ route('careers.life') }}">People Of Runaya</a></li>
+            </ul>
+        </div>
+
+        {{-- Our Businesses --}}
+        <div class="footer__col">
+            <h4 class="footer__col-title">Our Businesses</h4>
+            <ul>
+                <li><a href="{{ route('businesses.aluminium') }}">Aluminium Recovery</a></li>
+                <li><a href="{{ route('businesses.critical-metal') }}">Critical Metal Recovery</a></li>
+                <li><a href="{{ route('businesses.datacentre') }}">Gas-Atomized Aluminium Powder</a></li>
+                <li><a href="{{ route('businesses.mining') }}">Ground Support Solutions</a></li>
+            </ul>
+
+            <h4 class="footer__col-title footer__col-title--spaced">Follow Us on</h4>
 
             {{-- Social icons --}}
             <div class="footer__social">
@@ -44,23 +61,16 @@
             </div>
         </div>
 
-        {{-- Our Businesses --}}
-        <div class="footer__col">
-            <h4 class="footer__col-title">Our Businesses</h4>
-            <ul>
-                <li><a href="{{ route('businesses.aluminium') }}">Aluminium Recovery</a></li>
-                <li><a href="{{ route('businesses.critical-metal') }}">Critical Metal Recovery</a></li>
-                <li><a href="{{ route('businesses.datacentre') }}">Gas-Atomized Aluminium Powder</a></li>
-                <li><a href="{{ route('businesses.mining') }}">Ground Support Solutions</a></li>
-            </ul>
-        </div>
-
         {{-- Careers + Contact --}}
         <div class="footer__col">
-            <h4 class="footer__col-title">Careers</h4>
+           
+
+
+
+          <h4 class="footer__col-title">ESG</h4>
             <ul>
-                <li><a href="{{ route('careers.index') }}">Careers@Runaya</a></li>
-                <li><a href="{{ route('careers.life') }}">People Of Runaya</a></li>
+                <li><a href="{{ route('contact') }}">Environment Social Governance</a></li>
+              
             </ul>
 
             <h4 class="footer__col-title footer__col-title--spaced">Contact Us</h4>
