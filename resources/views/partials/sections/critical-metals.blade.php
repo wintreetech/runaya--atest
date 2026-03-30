@@ -106,7 +106,7 @@
 {{-- Body text --}}
 <foreignObject x="60" y="410" width="1198" height="170">
     <div xmlns="http://www.w3.org/1999/xhtml" class="cm-body-fo">
-        Based in Rajasthan, the Critical Metal Recovery Business strengthens Runaya’s role in India’s critical metals ecosystem and supports national objectives of reducing import dependency while building resilient domestic supply chains. The facilities focus on the recovery and processing of critical metals, with capabilities that include metals such as cadmium, cobalt, , copper,  antimony and zinc. Our operations are powered through responsible energy sourcing that includes renewable energy as part of the overall energy mix. These facilities operate on a level  and serve high-reliability end-use sectors including energy storage, aerospace, defense, electronics, advanced coatings, and precision engineering.
+        Based in Rajasthan, the Critical Metal Recovery Business strengthens Runaya’s role in India’s critical metals ecosystem and supports national objectives of reducing import dependency while building resilient domestic supply chains. The facilities focus on the recovery and processing of critical metals, with capabilities that include metals such as cadmium, cobalt, copper, antimony and zinc. Our operations are powered through responsible energy sourcing that includes renewable energy as part of the overall energy mix. These facilities operate on a level  and serve high-reliability end-use sectors including energy storage, aerospace, defense, electronics, advanced coatings, and precision engineering.
     </div>
 </foreignObject>
 

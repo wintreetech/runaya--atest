@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var locations = {
         mumbai: {
-            title: "Registered Office",
+            title: "Corporate Office",
             addr: "Maharashtra",
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.0!2d72.8480!3d19.1863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b633e5810e93%3A0x7501d3e4e0c7a691!2sMalad+West%2C+Mumbai!5e0!3m2!1sen!2sin!4v1",
         },
@@ -15,22 +15,22 @@ document.addEventListener("DOMContentLoaded", function () {
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d84.0063!3d21.8553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a20b3f74b7af5cf%3A0x35b8a95b3b15de3e!2sJharsuguda%2C+Odisha!5e0!3m2!1sen!2sin!4v1",
         },
         korba: {
-            title: "Aluminium Recovery Business",
+            title: "Gas Atomized Aluminium Powder Business",
             addr: "Chhattisgarh",
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d82.7499!3d22.3595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a281773cf5af18b%3A0x40e6af4d4a155c0!2sKorba%2C+Chhattisgarh!5e0!3m2!1sen!2sin!4v1",
         },
         chanderiya: {
-            title: "Critical Metal Recovery Business",
+            title: "Aluminium Recovery Business",
             addr: "Rajasthan",
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d74.6313!3d24.8830!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3968040000000001%3A0x40ef0b15e42fe80!2sChittorgarh%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1",
         },
         bhilwara: {
-            title: "Ground Support Solutions Business",
+            title: "Critical Metal Recovery Business",
             addr: "Rajasthan",
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d74.6313!3d25.3500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f84ae3b39ffa5%3A0x3ae4b45ad9b99c53!2sBhilwara%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1",
         },
         dariba: {
-            title: "Critical Metal Recovery Business",
+            title: "Ground Support Solutions Business",
             addr: "Rajasthan",
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d74.5200!3d25.0800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f9e0000000001%3A0x40ef0b15e42fe80!2sDariba%2C+Rajsamand%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1",
         },
