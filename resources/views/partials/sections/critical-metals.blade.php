@@ -44,7 +44,7 @@
        = -986 + sqrt(1531406 - 47961)
        = -986 + sqrt(1483445) = -986 + 1218 = 232
 --}}
-<g class="cm-mineral-g" id="cmCobalt" transform="translate(380,225)">
+<g class="cm-mineral-g" id="cmCobalt" transform="translate(480,225)">
     <circle r="68" fill="rgba(255,255,255,0.12)"
             stroke="rgba(255,255,255,0.3)" stroke-width="1.5"
             class="cm-circle-el"/>
@@ -55,28 +55,14 @@
            preserveAspectRatio="xMidYMid slice"/>
     <circle r="63" fill="rgba(80,121,137,0.6)" class="cm-img-placeholder"/>
 </g>
-<text x="380" y="320" class="cm-label cm-label--md">Cobalt</text>
-
-
-<g class="cm-mineral-g" id="cmZinc" transform="translate(659,252)">
-    <circle r="68" fill="rgba(255,255,255,0.12)"
-            stroke="rgba(255,255,255,0.3)" stroke-width="1.5"
-            class="cm-circle-el"/>
-    <clipPath id="clipZinc"><circle r="63"/></clipPath>
-    <image href="{{ asset('images/home/minerals/zinc.png') }}"
-           x="-63" y="-63" width="126" height="126"
-           clip-path="url(#clipZinc)"
-           preserveAspectRatio="xMidYMid slice"/>
-    <circle r="63" fill="rgba(80,121,137,0.6)" class="cm-img-placeholder"/>
-</g>
-<text x="659" y="347" class="cm-label cm-label--md">Zinc</text>
+<text x="480" y="320" class="cm-label cm-label--md">Cobalt</text>
 
 {{-- ═══ COPPER (878, 232) — medium, right-center ═══
      y = -986 + sqrt(1237.5² - (878-659)²)
        = -986 + sqrt(1531406 - 47961)
        = -986 + 1218 = 232
 --}}
-<g class="cm-mineral-g" id="cmCopper" transform="translate(938,225)">
+<g class="cm-mineral-g" id="cmCopper" transform="translate(838,225)">
     <circle r="68" fill="rgba(255,255,255,0.12)"
             stroke="rgba(255,255,255,0.3)" stroke-width="1.5"
             class="cm-circle-el"/>
@@ -87,7 +73,7 @@
            preserveAspectRatio="xMidYMid slice"/>
     <circle r="63" fill="rgba(80,121,137,0.6)" class="cm-img-placeholder"/>
 </g>
-<text x="938" y="320" class="cm-label cm-label--md">Copper</text>
+<text x="838" y="320" class="cm-label cm-label--md">Copper</text>
 
 {{-- ═══ ANTIMONY (1178, 142) — large, far right ═══ --}}
 <g class="cm-mineral-g" id="cmAntimony" transform="translate(1178,142)">
