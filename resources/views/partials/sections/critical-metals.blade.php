@@ -58,7 +58,7 @@
 <text x="380" y="320" class="cm-label cm-label--md">Cobalt</text>
 
 
-<g class="cm-mineral-g" id="cmZinc" transform="translate(659,252)">
+<g class="cm-mineral-g" id="cmZincc" transform="translate(659,252)">
     <circle r="68" fill="rgba(255,255,255,0.12)"
             stroke="rgba(255,255,255,0.3)" stroke-width="1.5"
             class="cm-circle-el"/>
