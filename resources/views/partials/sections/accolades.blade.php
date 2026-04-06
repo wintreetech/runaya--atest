@@ -39,7 +39,7 @@
                         <img src="{{ asset('images/home/awards/award-1.svg') }}" alt="GreenTech HR Award">
                     </div>
                     <div class="ac-text">
-                        <h4>Great Place to Work Certified</h4>
+                        <h4>Great Place to Work Certified 2026-27</h4>
                     </div>
                 </div>
 
@@ -175,7 +175,7 @@
                         <img src="{{ asset('images/home/awards/award-1.svg') }}" alt="GreenTech HR Award">
                     </div>
                     <div class="ac-text">
-                        <h4>Great Place to Work Certified</h4>
+                        <h4>Great Place to Work Certified 2026-27</h4>
                     </div>
                 </div>
 

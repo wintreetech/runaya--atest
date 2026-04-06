@@ -25,7 +25,7 @@
                     </div>
                     <div class="essence-bottom">
                         <p class="essence-desc">
-                            Embedding circular manufacturing practices that lower environmental impact while strengthening long-term operational resilience.
+                            Embedding circular manufacturing that reduces environmental impact and strengthens long-term operational excellence.
                         </p>
                         <a href="{{ route('esg.sustainability') }}" class="essence-btn">KNOW MORE</a>
                     </div>
@@ -83,7 +83,7 @@
                     </div>
                     <div class="essence-bottom">
                         <p class="essence-desc">
-                           Creating shared value with local communities through inclusive growth, skill development and sustainable livelihoods around our operations.
+                           Creating shared value with local communities through inclusive growth, skill development and cohesive livelihood around our operations.
                         </p>
                         <a href="{{ route('esg.index') }}" class="essence-btn">KNOW MORE</a>
                     </div>
@@ -110,7 +110,7 @@
                     </div>
                     <div class="essence-bottom">
                         <p class="essence-desc">
-                            Fostering a diverse, empowered workforce where every individual can thrive — with 55% women employees and leaders driving Runaya's mission forward.
+                            Fostering a diverse, empowered workforce where every individual can grow— with 55% women employees and leaders driving Runaya's mission forward.
                         </p>
                         <a href="{{ route('careers.index') }}" class="essence-btn">KNOW MORE</a>
                     </div>

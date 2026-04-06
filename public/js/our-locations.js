@@ -5,42 +5,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var locations = {
         mumbai: {
-            title: "Corporate Office",
-            addr: "Maharashtra",
+            items: ["Corporate Office"],
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.0!2d72.8480!3d19.1863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b633e5810e93%3A0x7501d3e4e0c7a691!2sMalad+West%2C+Mumbai!5e0!3m2!1sen!2sin!4v1",
         },
-        jharsuguda: {
-            title: "Aluminium Recovery Business",
-            addr: "Odisha",
+        odisha: {
+            items: [
+                "Aluminium Recovery Business",
+                "Gas Atomized Aluminium Powder Business",
+            ],
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d84.0063!3d21.8553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a20b3f74b7af5cf%3A0x35b8a95b3b15de3e!2sJharsuguda%2C+Odisha!5e0!3m2!1sen!2sin!4v1",
         },
-        korba: {
-            title: "Gas Atomized Aluminium Powder Business",
-            addr: "Chhattisgarh",
+        chhattisgarh: {
+            items: ["Aluminium Recovery Business"],
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d82.7499!3d22.3595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a281773cf5af18b%3A0x40e6af4d4a155c0!2sKorba%2C+Chhattisgarh!5e0!3m2!1sen!2sin!4v1",
         },
-        chanderiya: {
-            title: "Aluminium Recovery Business",
-            addr: "Rajasthan",
-            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d74.6313!3d24.8830!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3968040000000001%3A0x40ef0b15e42fe80!2sChittorgarh%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1",
-        },
-        bhilwara: {
-            title: "Critical Metal Recovery Business",
-            addr: "Rajasthan",
+        rajasthan: {
+            items: [
+                "Critical Metal Recovery Business",
+                "Ground Support Solutions Business",
+            ],
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d74.6313!3d25.3500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f84ae3b39ffa5%3A0x3ae4b45ad9b99c53!2sBhilwara%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1",
-        },
-        dariba: {
-            title: "Ground Support Solutions Business",
-            addr: "Rajasthan",
-            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d74.5200!3d25.0800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f9e0000000001%3A0x40ef0b15e42fe80!2sDariba%2C+Rajsamand%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1",
         },
     };
 
     var listItems = section.querySelectorAll(".loc-item");
     var mapPins = section.querySelectorAll(".map-pin");
-    var cardTitle = document.getElementById("locCardTitle");
-    var cardAddr = document.getElementById("locCardAddr");
     var card = document.getElementById("locCard");
+
     var gmap = document.getElementById("locGmap");
 
     function activate(key) {
@@ -60,15 +51,22 @@ document.addEventListener("DOMContentLoaded", function () {
         /* Animate card out → swap content → in */
         card.classList.add("is-updating");
         setTimeout(function () {
-            cardTitle.textContent = data.title;
-            cardAddr.innerHTML = data.addr.replace(/\n/g, "<br>");
+            card.innerHTML = data.items
+                .map(function (item) {
+                    return '<div class="loc-card-item">' + item + "</div>";
+                })
+                .join("");
+
             if (gmap) gmap.src = data.mapSrc;
+
             card.classList.remove("is-updating");
+
             if (typeof gsap !== "undefined") {
-                gsap.from(card, {
+                gsap.from(".loc-card-item", {
                     y: 10,
                     opacity: 0,
                     duration: 0.35,
+                    stagger: 0.08,
                     ease: "power3.out",
                 });
             }
@@ -86,6 +84,8 @@ document.addEventListener("DOMContentLoaded", function () {
             activate(pin.dataset.loc);
         });
     });
+
+    activate("mumbai");
 
     /* Entrance animations */
     if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {

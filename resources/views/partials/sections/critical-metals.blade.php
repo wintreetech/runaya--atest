@@ -44,7 +44,7 @@
        = -986 + sqrt(1531406 - 47961)
        = -986 + sqrt(1483445) = -986 + 1218 = 232
 --}}
-<g class="cm-mineral-g" id="cmCobalt" transform="translate(480,225)">
+<g class="cm-mineral-g" id="cmCobalt" transform="translate(380,225)">
     <circle r="68" fill="rgba(255,255,255,0.12)"
             stroke="rgba(255,255,255,0.3)" stroke-width="1.5"
             class="cm-circle-el"/>
@@ -55,14 +55,28 @@
            preserveAspectRatio="xMidYMid slice"/>
     <circle r="63" fill="rgba(80,121,137,0.6)" class="cm-img-placeholder"/>
 </g>
-<text x="480" y="320" class="cm-label cm-label--md">Cobalt</text>
+<text x="380" y="320" class="cm-label cm-label--md">Cobalt</text>
+
+
+<g class="cm-mineral-g" id="cmZinc" transform="translate(659,252)">
+    <circle r="68" fill="rgba(255,255,255,0.12)"
+            stroke="rgba(255,255,255,0.3)" stroke-width="1.5"
+            class="cm-circle-el"/>
+    <clipPath id="clipZinc"><circle r="63"/></clipPath>
+    <image href="{{ asset('images/home/minerals/zinc.png') }}"
+           x="-63" y="-63" width="126" height="126"
+           clip-path="url(#clipZinc)"
+           preserveAspectRatio="xMidYMid slice"/>
+    <circle r="63" fill="rgba(80,121,137,0.6)" class="cm-img-placeholder"/>
+</g>
+<text x="659" y="347" class="cm-label cm-label--md">Zinc</text>
 
 {{-- ═══ COPPER (878, 232) — medium, right-center ═══
      y = -986 + sqrt(1237.5² - (878-659)²)
        = -986 + sqrt(1531406 - 47961)
        = -986 + 1218 = 232
 --}}
-<g class="cm-mineral-g" id="cmCopper" transform="translate(838,225)">
+<g class="cm-mineral-g" id="cmCopper" transform="translate(938,225)">
     <circle r="68" fill="rgba(255,255,255,0.12)"
             stroke="rgba(255,255,255,0.3)" stroke-width="1.5"
             class="cm-circle-el"/>
@@ -73,7 +87,7 @@
            preserveAspectRatio="xMidYMid slice"/>
     <circle r="63" fill="rgba(80,121,137,0.6)" class="cm-img-placeholder"/>
 </g>
-<text x="838" y="320" class="cm-label cm-label--md">Copper</text>
+<text x="938" y="320" class="cm-label cm-label--md">Copper</text>
 
 {{-- ═══ ANTIMONY (1178, 142) — large, far right ═══ --}}
 <g class="cm-mineral-g" id="cmAntimony" transform="translate(1178,142)">
@@ -92,7 +106,7 @@
 {{-- Body text --}}
 <foreignObject x="60" y="410" width="1198" height="170">
     <div xmlns="http://www.w3.org/1999/xhtml" class="cm-body-fo">
-        Based in Rajasthan, the Critical Metal Recovery Business strengthens Runaya’s role in India’s critical metals ecosystem and supports national objectives of reducing import dependency while building resilient domestic supply chains. The facilities focus on the recovery and processing of critical metals, with capabilities that include metals such as cadmium, cobalt, copper, antimony and zinc. Our operations are powered through responsible energy sourcing that includes renewable energy as part of the overall energy mix. These facilities operate on a level  and serve high-reliability end-use sectors including energy storage, aerospace, defense, electronics, advanced coatings, and precision engineering.
+       India’s critical metals ecosystem is strengthened, through Runaya’s sustainable & innovation-led solutions, aligned with the national mission of reducing import dependency and building resilient domestic supply chains. <br><br>Located in Rajasthan, the facilities focus on the recovery and processing of zinc and critical metals, that include cadmium, cobalt, copper and  antimony. Powered by responsible energy sourcing, we operate at a scale that serves high-reliability sectors, that includes energy storage capabilities, aerospace,  defense, electronics, advanced coatings, and precision engineering.
     </div>
 </foreignObject>
 

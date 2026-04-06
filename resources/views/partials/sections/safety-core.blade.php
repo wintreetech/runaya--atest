@@ -3,7 +3,7 @@
     <div class="sc-content">
         <h2 class="sc-heading">Safety at the Core of Responsible Operations</h2>
         <p class="sc-body">
-           At Runaya, safety is not just a priority, it’s a core value that shapes everything we do. We are dedicated to safeguarding the health and well-being of our employees, stakeholders, and communities—fostering a culture of safety excellence where every employee goes home safely, every day. Our mission is clear: to achieve zero recordable injuries and send every team member home safely to their loved ones.  Safety is everyone’s responsibility, and together, we are driving a safety revolution.
+           At Runaya, safety is not just a priority, but a core value that shapes everything we do. Safeguarding the health and well-being of our employees, stakeholders, and communities is central to our operations— ensuring every employee goes home safely, every day. Our mission is clear: to achieve zero-record injuries and together build a culture where safety is integral.
         </p>
         <a href="{{ route('esg.safety') }}" class="sc-btn">KNOW MORE</a>
     </div>

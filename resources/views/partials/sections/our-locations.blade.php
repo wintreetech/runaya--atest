@@ -9,18 +9,14 @@
 
     <div class="loc-list-card-row">
         <ul class="loc-list" id="locList">
-            <li class="loc-item is-active" data-loc="mumbai">Maharashtra</li>
-            <li class="loc-item" data-loc="jharsuguda">Odisha</li>
-            <li class="loc-item" data-loc="korba">Odisha</li>
-            <li class="loc-item" data-loc="chanderiya">Chattisgarh</li>
-            <li class="loc-item" data-loc="bhilwara">Rajasthan</li>
-            <li class="loc-item" data-loc="dariba">Rajasthan</li>
-        </ul>
+    <li class="loc-item is-active" data-loc="mumbai">Mumbai</li>
+    <li class="loc-item" data-loc="odisha">Odisha</li>
+    <li class="loc-item" data-loc="chhattisgarh">Chhattisgarh</li>
+    <li class="loc-item" data-loc="rajasthan">Rajasthan</li>
+</ul>
 
-        <div class="loc-card" id="locCard">
-            <h3 class="loc-card__title" id="locCardTitle">Corporate Office</h3>
-           
-        </div>
+       <div class="loc-card" id="locCard"></div>
+
     </div>
 
     {{-- Map sits BELOW list+card --}}

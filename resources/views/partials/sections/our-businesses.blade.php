@@ -22,7 +22,7 @@
                 <div class="ob-card__overlay"></div>
                 <div class="ob-card__content">
                     <h3>Aluminium Recovery Business</h3>
-                    <p>Runaya's aluminium recovery business delivers significantly lower emissions through zero waste, zero discharge processing that turns aluminium dross into high value metal instead of landfill.</p>
+                    <p>Turning dross into value, our zero-waste, zero-discharge process recovers high-quality aluminium; reducing impact and significantly lowering emissions.</p>
                     <a href="{{ route('businesses.aluminium') }}" class="ob-btn">KNOW MORE</a>
                 </div>
                 <button class="ob-arrow ob-arrow--left" aria-label="Previous">
@@ -45,7 +45,7 @@
                 <div class="ob-card__overlay"></div>
                 <div class="ob-card__content">
                     <h3>Critical Metal Recovery Business</h3>
-                    <p>Runaya’s critical metal recovery business delivers value from complex industrial residues through advanced recovery technologies that convert underutilised materials into essential resources for modern industries.
+                    <p>We recover metals from high-value industrial residues for modern industries using advanced recovery technologies.
                     </p>
                     <a href="{{ route('businesses.critical-metal') }}" class="ob-btn">KNOW MORE</a>
                 </div>
@@ -69,7 +69,7 @@
                 <div class="ob-card__overlay"></div>
                 <div class="ob-card__content">
                     <h3>Gas Atomized Aluminium Powder Business</h3>
-                    <p>Runaya’s Gas Atomized Aluminium Powder business delivers high purity aluminium powders through advanced atomization technology that supports applications across additive manufacturing, automotive, coatings, and specialised industrial uses.</p>
+                    <p>Runaya, in joint venture with Eckart, a global leader in aluminium granules and effect pigments headquartered in Germany, produces high-purity, low-carbon aluminium powders using advanced atomization technology. Based in Odisha, the facility serves high-performance sectors like aviation, aerospace, space, solar, catalysts, and pigments.</p>
                     <a href="{{ route('businesses.aluminium') }}" class="ob-btn">KNOW MORE</a>
                 </div>
                 <button class="ob-arrow ob-arrow--left" aria-label="Previous">
@@ -92,7 +92,7 @@
                 <div class="ob-card__overlay"></div>
                 <div class="ob-card__content">
                     <h3>Ground Support Solutions Business</h3>
-                    <p>Runaya’s ground support solutions business delivers advanced reinforcement systems for underground mining through engineered ground support technologies that enhance structural stability and improve operational safety.</p>
+                    <p>In partnership with Minova, a global leader in ground support, Runaya delivers advanced technologies that strengthen safety-critical ground support and geotechnical projects, enabling safer mining operations and infrastructure.</p>
                     <a href="{{ route('businesses.datacentre') }}" class="ob-btn">KNOW MORE</a>
                 </div>
                 <button class="ob-arrow ob-arrow--left" aria-label="Previous">

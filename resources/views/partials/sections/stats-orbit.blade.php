@@ -117,7 +117,7 @@
             responsibly, and fostering inclusivity
         </h2>
         <p class="about-body gsap-fade-up">
-          Runaya is a leading manufacturing company, committed to driving innovation and sustainability across the resources sector. We partner with industry stakeholders to deliver high-value manufacturing solutions across mining, metals, and telecom sectors, powered by a diverse and inclusive work culture.
+          Runaya is a leading manufacturing company, committed to sustainability and driving innovation across the resources sector. We partner with industry stakeholders to deliver high-value manufacturing solutions powered by a diverse and inclusive work culture.
         </p>
     </div>
 </section>
